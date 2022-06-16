@@ -1,0 +1,14 @@
+export class patients {
+  idCard: string = '';
+  firstName: string = '';
+  lastName: string = '';
+  phonenumber: string = '';
+  email: string = '';
+  address: string = '';
+  detail: string = '';
+  status: string = '';
+  gender: string = '';
+  congenitaldisease: string = '';
+  drugallergy: string = '';
+  pregnant: string = '';
+}
