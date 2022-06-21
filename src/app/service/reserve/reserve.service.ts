@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable , throwError } from 'rxjs';
 import { catchError , map } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { booking } from 'src/app/components/history-reserve/history_reserve_type';
+import { reserves } from 'src/app/components/reserve/reserve.type';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,8 @@ export class ReserveService {
 
   constructor(private httpClient : HttpClient) { }
 
-    Reserves(data: booking): Observable<any> {
-      let API_URL = `${this.Reserve_API}/booking/create`;
+    Reserves(data: reserves): Observable<any> {
+      let API_URL = `${this.Reserve_API}/reserves/create`;
       return this.httpClient.post(API_URL, data)
         .pipe(
           catchError(this.handleError)
