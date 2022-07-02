@@ -8,7 +8,7 @@ const routes: Routes = [
   {path:'',pathMatch:'full',redirectTo: 'register'},
   {path:'register',component: RegisterComponent},
   {path:'reserve',component: ReserveComponent},
-  {path:'history_reserve',component: HistoryReserveComponent}
+  {path:'history',component: HistoryReserveComponent}
 ];
 
 @NgModule({
