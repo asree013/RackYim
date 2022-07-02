@@ -7,6 +7,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { RegisterModule } from "./components/register/register.module";
 import { ReserveModule } from "./components/reserve/reserve.module";
 import { HistoryReserveModule } from './components/history-reserve/history-reserve.module';
+import { CelendarModule } from './components/celendar/celendar.module';
+
 
 import { FormsModule , ReactiveFormsModule } from "@angular/forms";
 
@@ -23,7 +25,8 @@ import { FormsModule , ReactiveFormsModule } from "@angular/forms";
     RegisterModule,
     FormsModule,
     ReactiveFormsModule,
-    HistoryReserveModule
+    HistoryReserveModule,
+    CelendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
