@@ -10,6 +10,9 @@ import { CelendarComponent } from './celendar/celendar.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    CelendarComponent
   ]
 })
 export class CelendarModule { }

@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './components/register/register/register.component';
 import { ReserveComponent } from './components/reserve/reserve/reserve.component';
 import { HistoryReserveComponent } from './components/history-reserve/history-reserve.component';
+import { CelendarComponent } from './components/celendar/celendar/celendar.component';
 
 const routes: Routes = [
   {path:'',pathMatch:'full',redirectTo: 'register'},
   {path:'register',component: RegisterComponent},
+  {path: 'celendar',component:CelendarComponent },
   {path:'reserve',component: ReserveComponent},
   {path:'history',component: HistoryReserveComponent}
 ];
