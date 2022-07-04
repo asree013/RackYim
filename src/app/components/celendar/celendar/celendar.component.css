@@ -11,13 +11,15 @@
 
 .barser img {
     width: 100%;
+    margin-left: -1%;
+    margin-top: -2%;
     z-index: -1;
     position: fixed;
 }
 
 .serlica img {
     width: 100%;
-    margin-top: 0%;
+    margin-top: -2%;
     z-index: -1;
     position: fixed;
 }
@@ -165,14 +167,15 @@
 
     .barser img {
         width: 100%;
-        margin-top: 0%;
+        margin-top: -3%;
+        margin-left: -3%;
         z-index: -1;
         position: fixed;
     }
 
     .serlica img {
         width: 100%;
-        margin-top: 0%;
+        margin-top: -3%;
         z-index: -1;
         position: fixed;
     }
@@ -315,14 +318,17 @@
 
 @media only screen and (max-width:700px){
     .barser img {
-        width: 100%;
+        width: 130%;
+        margin-left: -4.5%;
+        margin-top: -5%;
         z-index: -1;
         position: fixed;
     }
     
     .serlica img {
-        width: 100%;
-        margin-top: 0%;
+        width: 120%;
+        margin-top: -5%;
+        margin-left: -15%;
         z-index: -1;
         position: fixed;
     }
@@ -373,7 +379,7 @@
     .calendar {
         width: 23rem;
         height: 29rem;
-        margin-left: 2%;
+        margin-left: -4%;
         margin-top: 30%;
         background-color: #2c2c2c;
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
