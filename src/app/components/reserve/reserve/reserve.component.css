@@ -6,6 +6,27 @@
 
 .container {
     max-width: 100vh;
+    position: relative;
+}
+
+.barser img {
+    width: 95%;
+    margin-left: 5%;
+    position: fixed;
+    z-index: 0;
+}
+
+.serlica img {
+    width: 95%;
+    margin-top: 0%;
+    z-index: 0;
+    position: fixed;
+}
+
+.profile img {
+    width: 45%;
+    margin-top: -5%;
+    position: absolute;
 }
 
 .container img {
@@ -74,8 +95,30 @@
 }
 
 @media only screen and (max-width:1024px){
+    .barser img {
+        width: 100%;
+        margin-left: -1%;
+        margin-top: -3%;
+        z-index: -3;
+        position: fixed;
+    }
+
+    .serlica img {
+        width: 100%;
+        margin-top: 50%;
+        z-index: -2;
+        position: fixed;
+    }
+
+    .profile img {
+        width: 60%;
+        margin-top: 45%;
+        position: absolute;
+    }
+
     .container {
         width: 100%;
+        position: relative;
     }
 
     .container img {
