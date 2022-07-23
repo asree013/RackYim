@@ -24,43 +24,4 @@
         </nav>
     </div>
 
-<script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
-  <script>
-    const canvas = document.querySelector('#canvas');
-    const signaturePad = new SignaturePad(canvas, {
-      backgroundColor: 'rgb(238,238,238)',
-    });
-
-    $(window).on('load', function(){
-      canvas.setAttribute('width', $('.container').width());
-      canvas.setAttribute('height', window.innerHeight - $('#btn').outerHeight() - 10);
-      signaturePad.clear();
-	  // Initializes a LIFF app
-      liff.init(function (data) {});
-    });
-    
-    liff.getProfile().then(function (profile) {
-	  liff.sendMessages([
-		{
-		  type: 'image',
-		  originalContentUrl: 'https://' + document.domain + '/imgs/' + res + '.jpg',
-		  previewImageUrl: 'https://' + document.domain + '/imgs/' + res + '_240.jpg'
-		},
-		{
-		  type: 'text',
-		  text: 'From:' + profile.displayName
-		}
-	  ]).then(function () {
-		liff.closeWindow();
-	  }).catch(function (error) {
-		window.alert('Error sending message: ' + error.message);
-	  });
-	}).catch(function (error) {
-		window.alert("Error getting profile: " + error.message);
-	});
-
-  </script>
-  
-
 <router-outlet></router-outlet>
