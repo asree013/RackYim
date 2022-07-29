@@ -8,7 +8,7 @@ import { CalendarComponent } from '@syncfusion/ej2-angular-calendars';
 const routes: Routes = [
   {path:'',pathMatch:'full',redirectTo: 'register'},
   {path:'register',component: RegisterComponent},
-  {path:'calendar-reserv', component: CalendarComponent},
+  {path:'calendar-reserve', component: CalendarComponent},
   {path:'reserve',component: ReserveComponent},
   {path:'history-reserve',component: HistoryReserveComponent}
 ];
