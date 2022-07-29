@@ -10,7 +10,7 @@ const routes: Routes = [
   {path:'register',component: RegisterComponent},
   {path:'calendar-reserv', component: CalendarComponent},
   {path:'reserve',component: ReserveComponent},
-  {path:'history',component: HistoryReserveComponent}
+  {path:'history-reserve',component: HistoryReserveComponent}
 ];
 
 @NgModule({

@@ -17,7 +17,10 @@
                     <li class="nav-item">
                         <a class="nav-link" routerLinkActive="active" routerLink="/reserve">reserve</a>
                         
-                    </li>  
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" routerLinkActive="active" routerLink="/history-reserve">history</a>
+                    </li> 
 
                 </ul>
             </div>           
@@ -25,20 +28,3 @@
     </div>
 
 <router-outlet></router-outlet>
-
-<script src="https://d.line-scdn.net/liff/1.0/sdk.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
-  <script>
-    const canvas = document.querySelector('#canvas');
-    const signaturePad = new SignaturePad(canvas, {
-      backgroundColor: 'rgb(238,238,238)',
-    });
-
-    $(window).on('load', function(){
-      canvas.setAttribute('width', $('.container').width());
-      canvas.setAttribute('height', window.innerHeight - $('#btn').outerHeight() - 10);
-      signaturePad.clear();
-	  // Initializes a LIFF app
-      liff.init(function (data) {});
-    });
-  </script>
