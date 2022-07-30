@@ -9,7 +9,7 @@ import { CalendarReserveComponent } from "./components/calendar-reserve/calendar
 const routes: Routes = [
   {path:'',pathMatch:'full',redirectTo: 'register'},
   {path:'register',component: RegisterComponent},
-  {path:'calendar-reserv', component: CalendarComponent},
+  {path:'calendar-reserve', component: CalendarComponent},
   {path:'reserve',component: ReserveComponent},
   {path:'history-reserve',component: HistoryReserveComponent},
   {path:'calendar-reserve',component: CalendarReserveComponent}
