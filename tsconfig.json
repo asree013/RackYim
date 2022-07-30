@@ -16,12 +16,15 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
+    "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ]
+    "lib": ["es2020", "dom"],
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": false,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,9 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit , NgZone } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormGroup , FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { patients } from './../register-type';
 import { RegisterService } from './../../../service/register/register.service';
+import { LineLiffService } from 'src/app/service/line-liff/line-liff.service';
+import { LineService } from 'src/app/Base/service/line/line.service';
 
 
 
@@ -14,27 +16,31 @@ import { RegisterService } from './../../../service/register/register.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  item:patients = new patients();
-  
+  item: patients = new patients();
+
   constructor(
     public FormBuilder: FormBuilder,
-    private router: Router,
-    private ngZone: NgZone,
-    private registerService: RegisterService
-    
-  ) {}
+    private registerService: RegisterService,
+    private lineservice: LineService
+  ) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    await this.lineservice.lineInit();
+    await this.onInitailData();
   }
-
+  onInitailData() {
+    let profile = this.lineservice.getProfile();
+    if (profile) {
+      this.item.lineliffId = profile.userId;
+      this.item.companyId = profile.companyId;
+      console.log(profile);
+      
+    }
+  }
   onSubmit(): any {
-
-    console.log(this.item);
-    
-    this.registerService.Register(this.item)
-    .subscribe(()=> {
-      console.log("สมัครสมาชิกเรียบร้อย");
-    }, (err) => {
+    this.registerService.Register(this.item).subscribe((result: patients) => {
+      console.log("สมัครสมาชิกเรียบร้อย", result);
+    }, (err: Error) => {
       console.log(err);
     })
   }

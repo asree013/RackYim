@@ -11,4 +11,6 @@ export class patients {
   congenitaldisease: string = '';
   drugallergy: string = '';
   pregnant: string = '';
+  lineliffId:string ; //ห้ามลบ
+  companyId:string ; //ห้ามลบ
 }
