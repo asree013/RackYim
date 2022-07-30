@@ -15,7 +15,7 @@ export class ReserveService {
   constructor(private httpClient: HttpClient) { }
 
   Reserves(data: reserves): Observable<any> {
-    let API_URL = `${this.Reserve_API}/reserves/create`;
+    let API_URL = `${this.Reserve_API}`;
     return this.httpClient.post(API_URL, data)
       .pipe(
         catchError(this.handleError)

@@ -13,7 +13,7 @@ isleapyear = (year) => {
 }
 
 getFebDays = (year) => {
-    return isleapyear(year) ? 29 : 28
+    return ( isleapyear(year) ) ? 29 : 28
 }
 
 let calendar = document.querySelector('.calendar')
