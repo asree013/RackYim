@@ -29,7 +29,7 @@ export class ReserveService {
     return this.httpClient.delete(API_URL, { headers: this.HttpHeaders })
   }
   gettyptlist(companyid:string): Observable<any> {
-    let API_URL = `${this.Reserve_API}/typebooking/`;
+    let API_URL = `${this.Reserve_API}/typebooking/${companyid}`;
     return this.httpClient.delete(API_URL, { headers: this.HttpHeaders })
   }
 
