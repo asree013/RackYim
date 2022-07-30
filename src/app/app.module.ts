@@ -9,8 +9,9 @@ import { ReserveModule } from "./components/reserve/reserve.module";
 import { HistoryReserveModule } from './components/history-reserve/history-reserve.module';
 
 
-import { CaledarReservModule } from './components/caledar-reserv/calendar-reserve.modole';
 import { FormsModule , ReactiveFormsModule } from "@angular/forms";
+import { CalendarReserveModule } from './components/calendar-reserve/calendar-reserve.module';
+
 
 
 
@@ -29,7 +30,7 @@ import { FormsModule , ReactiveFormsModule } from "@angular/forms";
     ReactiveFormsModule,
     HistoryReserveModule,
     CalendarModule,
-    CaledarReservModule
+    CalendarReserveModule
   ],
   providers: [],
   bootstrap: [AppComponent]

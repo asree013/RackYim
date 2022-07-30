@@ -4,13 +4,15 @@ import { RegisterComponent } from './components/register/register/register.compo
 import { ReserveComponent } from './components/reserve/reserve/reserve.component';
 import { HistoryReserveComponent } from './components/history-reserve/history-reserve.component';
 import { CalendarComponent } from '@syncfusion/ej2-angular-calendars';
+import { CalendarReserveComponent } from "./components/calendar-reserve/calendar-reserve.component";
 
 const routes: Routes = [
   {path:'',pathMatch:'full',redirectTo: 'register'},
   {path:'register',component: RegisterComponent},
-  {path:'calendar-reserv', component: CalendarComponent},
+  {path:'calendar-reserve', component: CalendarComponent},
   {path:'reserve',component: ReserveComponent},
-  {path:'history',component: HistoryReserveComponent}
+  {path:'history-reserve',component: HistoryReserveComponent},
+  {path:'calendar-reserve',component: CalendarReserveComponent}
 ];
 
 @NgModule({

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CaledarReservComponent } from './caledar-reserv.component';
+import { CalendarReserveComponent } from './calendar-reserve.component';
 
-describe('CaledarReservComponent', () => {
-  let component: CaledarReservComponent;
-  let fixture: ComponentFixture<CaledarReservComponent>;
+describe('CalendarReserveComponent', () => {
+  let component: CalendarReserveComponent;
+  let fixture: ComponentFixture<CalendarReserveComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CaledarReservComponent ]
+      declarations: [ CalendarReserveComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CaledarReservComponent);
+    fixture = TestBed.createComponent(CalendarReserveComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
