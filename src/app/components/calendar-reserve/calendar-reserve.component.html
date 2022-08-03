@@ -1,1 +1,19 @@
-<full-calendar [options]="calendarOptions"></full-calendar>
+<p>Calendar</p>
+
+<div>
+    <button (click)="onPreviousMonth()"> < </button>
+    <span> {{ calendarReserveService.getMonthName(monthNumber) }} &nbsp; {{ year }} </span>
+    <button (click)="onNextMonth()"> > </button>
+  </div>
+  
+  <br>
+  
+  <div class="calendar">
+    <span *ngFor='let weekDay of weekDaysName' class="day">
+      {{ weekDay }}
+    </span>
+  
+    <span *ngFor='let day of monthDays' class="day">
+      {{ day.number }}
+    </span>
+</div>
