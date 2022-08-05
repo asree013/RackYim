@@ -46,29 +46,29 @@ export class CalendarReserveService {
   public getMonthName(monthIndex: number): string {
     switch (monthIndex) {
       case 1:
-        return "มกราคม";      
+        return "กุมภาพันธ";      
       case 2:
-        return "กุมภาพันธ";
-      case 3:
         return "มีนาคม";
-      case 4:
+      case 3:
         return "เมษายน";
-      case 5:
+      case 4:
         return "พฤษภาคม";
-      case 6:
+      case 5:
         return "มิถุนายน";
-      case 7:
+      case 6:
         return "กรกฎาคม";
-      case 8:
+      case 7:
         return "สิงหาคม";
-      case 9:
+      case 8:
         return "กันยายน";
-      case 10:
+      case 9:
         return "ตุลาคม";
-      case 11:
+      case 10:
         return "พฤศจิกายน";
-      case 12:
+      case 11:
         return "ธันวาคม";
+      case 12:
+        return "มกราคม";
 
       default:
         return "|" + monthIndex;

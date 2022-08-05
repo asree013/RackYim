@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CalendarReserveService } from 'src/app/service/calendar-reserve/calendar-reserve.service';
 import { Day } from 'src/app/components/calendar-reserve/calendar.model';
-import { CalendarOptions } from '@fullcalendar/angular';
+
 
 
 @Component({
@@ -11,8 +11,7 @@ import { CalendarOptions } from '@fullcalendar/angular';
 })
 
 
-export class CalendarReserveComponent implements OnInit {
-  
+export class CalendarReserveComponent implements OnInit { 
   public monthDays: Day[];
 
   public monthNumber: number;
