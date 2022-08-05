@@ -10,7 +10,7 @@ export class LineService {
   private profileUsers: profile = new profile();
   constructor(private company: CompanyService) { }
   lineInit() {
-    liff.ready.then(() => {
+ 
       this.company.getLiffId(secretkey).subscribe((result) => {
         liff.init({ liffId: result.lineliffId }).then(async () => {
           if (liff.isLoggedIn()) {
@@ -26,10 +26,6 @@ export class LineService {
         })
         console.log(liff);
       })
-    })
-    
-  
-
   }
 
   logIn() {
