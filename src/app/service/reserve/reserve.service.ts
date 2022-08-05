@@ -15,7 +15,7 @@ export class ReserveService {
   constructor(private httpClient: HttpClient) { }
 
   Reserves(data: reserves): Observable<any> {
-    let API_URL = `${this.Reserve_API}/reserves/create`;
+    let API_URL = `${this.Reserve_API}`;
     return this.httpClient.post(API_URL, data)
       .pipe(
         catchError(this.handleError)
@@ -29,7 +29,7 @@ export class ReserveService {
     return this.httpClient.delete(API_URL, { headers: this.HttpHeaders })
   }
   gettyptlist(companyid:string): Observable<any> {
-    let API_URL = `${this.Reserve_API}/typebooking/`;
+    let API_URL = `${this.Reserve_API}/typebooking/${companyid}`;
     return this.httpClient.delete(API_URL, { headers: this.HttpHeaders })
   }
 
