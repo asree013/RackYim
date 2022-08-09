@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GatewayService {
-  private url: string = "http://localhost:3033/api/v1/"
+  private url: string = "https://api-clinic-1001.herokuapp.com/api/v1/"
   constructor(private http: HttpClient) { }
   get(path: string): Observable<any> {
     return new Observable((obs) => {

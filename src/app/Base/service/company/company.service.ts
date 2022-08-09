@@ -12,8 +12,6 @@ export class CompanyService {
 
   constructor(private gateway: GatewayService) { }
   getLiffId(secretkey: string): Observable<Liff> {
-   
     return  this.gateway.get(`company/getlineliffidBycompanysecretkey/${secretkey}`)
-    
-  }
+  } 
 }

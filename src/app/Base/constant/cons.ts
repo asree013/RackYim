@@ -1,1 +1,2 @@
-export var secretkey: string = "14caa7dfc35c4f1b900cb33d31d814a52f76382d7fd0a4fef363a88de8555582"
+export const secretkey: string = "e38579f958542fd34aacbb76b62ff16e999c386c5dd8a96971a8cf3b318b693d"
+export const listusers:string = btoa("LIST::USERS")
