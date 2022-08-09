@@ -62,7 +62,7 @@
       {{ weekDay }}
       
     </div>
-    <div class="days" *ngFor='let day of monthDays'>
+    <div class="days" *ngFor='let day of monthDays' (click)="selectDay()">
       {{ day.number }}
         
     </div>

@@ -4,6 +4,7 @@ import { Day } from 'src/app/components/calendar-reserve/calendar.model';
 
 
 
+
 @Component({
   selector: 'app-calendar-reserve',
   templateUrl: './calendar-reserve.component.html',
@@ -18,6 +19,8 @@ export class CalendarReserveComponent implements OnInit {
   public year: number;
 
   public weekDaysName: string[] = [];
+  private id : number;
+  router: any;
 
   constructor(public calendarReserveService: CalendarReserveService) {}
 
@@ -59,5 +62,9 @@ export class CalendarReserveComponent implements OnInit {
     this.monthDays = days;
     this.monthNumber = this.monthDays[0].monthIndex;
     this.year = this.monthDays[0].year;
+  }
+
+  selectDay(){
+    this.router.navigate(['/reserve'], {queryParams : {}})
   }
 }

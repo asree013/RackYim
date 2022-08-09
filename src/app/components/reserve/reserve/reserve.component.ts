@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ReserveService } from 'src/app/service/reserve/reserve.service';
 import { FormGroup , FormBuilder } from '@angular/forms';
 import { booking } from '../../history-reserve/history_reserve_type';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-reserve',
@@ -34,6 +35,29 @@ export class ReserveComponent implements OnInit {
     }, (err) => {
       console.log(err);
     })
+  
+  }
+  ReserveSweetAlert(){
+    {
+      Swal.fire({
+        title: 'คุณแน่ใจที่จะจอง?',
+        text: 'คุณสามารถเลือกวันที่จะจองได้',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'ใช่, ฉันต้องการจอง',
+        cancelButtonText: 'ไม่, ฉันยังไม่จอง',
+      }).then((result) => {
+        if (result.value) {
+          Swal.fire(
+            'ทำการจอง!',
+            'คุณได้จองคิวเป็นที่เรียบร้อย.',
+            'success'
+          );
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          Swal.fire('ยกเลิก', '(คูณยังไม่ได้ทำการจอง)', 'error');
+        }
+      });
+    }
   }
 
 }

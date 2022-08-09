@@ -6,6 +6,7 @@ import { patients } from './../register-type';
 import { RegisterService } from './../../../service/register/register.service';
 import { LineLiffService } from 'src/app/service/line-liff/line-liff.service';
 import { LineService } from 'src/app/Base/service/line/line.service';
+import Swal from 'sweetalert2';
 
 
 
@@ -17,6 +18,10 @@ import { LineService } from 'src/app/Base/service/line/line.service';
 })
 export class RegisterComponent implements OnInit {
   item: patients = new patients();
+
+  RegisterSweetAlert(){
+    Swal.fire("สมัครสมาชิกเรียบร้อย");
+  }
 
   constructor(
     public FormBuilder: FormBuilder,
