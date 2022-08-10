@@ -12,7 +12,7 @@ export class CalendarReserveService {
   constructor() {
     let date = new Date();
     this.currentYear = date.getFullYear();
-    this.currentMonthIndex = date.getMonth(); 
+    this.currentMonthIndex = date.getMonth();
   }
 
   public getCurrentMonth(): Day[] {
@@ -35,8 +35,8 @@ export class CalendarReserveService {
     days.push(firstday);
     //
 
-    let countDaysInMonth = new Date(year, monthIndex +1, 0).getDate();
-    for (let i = 2; i < countDaysInMonth +1; i++) {
+    let countDaysInMonth = new Date(year, monthIndex + 1, 0).getDate();
+    for (let i = 2; i < countDaysInMonth + 1; i++) {
       days.push(this.createDay(i, monthIndex, year));
     }
 
@@ -46,7 +46,7 @@ export class CalendarReserveService {
   public getMonthName(monthIndex: number): string {
     switch (monthIndex) {
       case 1:
-        return "กุมภาพันธ";      
+        return "กุมภาพันธ";
       case 2:
         return "มีนาคม";
       case 3:
@@ -110,5 +110,9 @@ export class CalendarReserveService {
     day.weekDayName = this.getWeekDayName(day.weekDayNumber);
 
     return day;
+  }
+  public newFormatDate(date: Day): string {
+    let newdate: string = `${date.year}-${(String(date.monthIndex + 1).length === 1 ? "0" + String(date.monthIndex + 1) : String(date.monthIndex + 1))}-${(String(date.number).length === 1) ? "0" + String(date.number) : String(date.number)}`;
+    return newdate
   }
 }

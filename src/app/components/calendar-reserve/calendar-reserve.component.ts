@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CalendarReserveService } from 'src/app/service/calendar-reserve/calendar-reserve.service';
 import { Day } from 'src/app/components/calendar-reserve/calendar.model';
+import {  Router } from '@angular/router';
 
 
 
@@ -12,17 +13,16 @@ import { Day } from 'src/app/components/calendar-reserve/calendar.model';
 })
 
 
-export class CalendarReserveComponent implements OnInit { 
+export class CalendarReserveComponent implements OnInit {
   public monthDays: Day[];
 
   public monthNumber: number;
   public year: number;
 
   public weekDaysName: string[] = [];
-  private id : number;
-  router: any;
+  private id: number;
 
-  constructor(public calendarReserveService: CalendarReserveService) {}
+  constructor(public calendarReserveService: CalendarReserveService,private router:Router) { }
 
   ngOnInit(): void {
     this.setMonthDays(this.calendarReserveService.getCurrentMonth());
@@ -47,7 +47,7 @@ export class CalendarReserveComponent implements OnInit {
     this.setMonthDays(this.calendarReserveService.getMonth(this.monthNumber, this.year));
   }
 
-  onPreviousMonth() : void{
+  onPreviousMonth(): void {
     this.monthNumber--;
 
     if (this.monthNumber < 1) {
@@ -64,7 +64,10 @@ export class CalendarReserveComponent implements OnInit {
     this.year = this.monthDays[0].year;
   }
 
-  selectDay(){
-    this.router.navigate(['/reserve'], {queryParams : {}})
+  selectDay(day: Day) {
+    console.log(this.calendarReserveService.newFormatDate(day));
+    this.router.navigate([`/reserve`],{queryParams:{
+      date:this.calendarReserveService.newFormatDate(day)
+    }})
   }
 }
