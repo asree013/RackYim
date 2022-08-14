@@ -197,6 +197,7 @@
         width: 70%;
         margin-top: 38%;
         margin-left: 0%;
+        z-index: -1;
         position: absolute;
     }
 
