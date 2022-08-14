@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit {
   }
   onSubmit(): any {
     if(this.item.idCard.length < 1){
-      Swal.fire("ไม่ได้ใส่บัตรประชาชน");
+      Swal.fire("ไม่ได้ใส่เลขบัตรประชาชน");
       return 0
     }
     if(this.item.firstName.length < 1){
@@ -66,7 +66,7 @@ export class RegisterComponent implements OnInit {
       return 0
     }
     if(this.item.gender.length < 1){
-      Swal.fire("ไม่ได้ใส่ระบุเพศ");
+      Swal.fire("ไม่ได้ระบุเพศ");
       return 0
     }
     if(this.item.congenitaldisease.length < 1){
