@@ -15,7 +15,7 @@ export class LineService {
       this.company.getLiffId(secretkey).subscribe(async (result) => {
         await liff.init({ liffId: result.lineliffId }).then(async () => {
           if (await liff.isLoggedIn()) {
-            let profile:profile = await liff.getProfile()
+            let profile = await liff.getProfile()
             profile.companyId = result.companyId;
             obs.next(profile)
           } else {

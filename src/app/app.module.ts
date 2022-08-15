@@ -11,6 +11,7 @@ import { CalendarReserveModule } from './components/calendar-reserve/calendar-re
 import { ErrorpageComponent } from './components/errorpage/errorpage.component';
 import { MenuModule } from './components/menu/menu.module';
 import { ReserveModule } from './components/reserve/reserve.module';
+import { ShereModule } from './Base/share/shere.module';
 
 
 
@@ -34,7 +35,8 @@ import { ReserveModule } from './components/reserve/reserve.module';
     HistoryReserveModule,
     CalendarModule,
     CalendarReserveModule,
-    ReserveModule
+    ReserveModule,
+    ShereModule
   ],
   providers: [],
   bootstrap: [AppComponent]
