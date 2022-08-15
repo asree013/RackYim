@@ -5,6 +5,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { reserves } from 'src/app/components/reserve/reserve.type';
 import { GatewayService } from 'src/app/Base/service/gateways/gateway.service';
 import { Selecter } from 'src/app/Base/models/selecter';
+import { Booking } from 'src/app/Base/models/booking';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class ReserveService {
 
   constructor(private httpClient: HttpClient,private gateway:GatewayService) { }
 
-  Reserves(data: reserves): Observable<any> {
+  Reserves(data: Booking): Observable<any> {
     let API_URL = `${this.Reserve_API}`;
     return this.httpClient.post(API_URL, data)
       .pipe(

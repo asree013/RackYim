@@ -9,16 +9,17 @@ import { registerlineliffitemview } from 'src/app/Base/models/registerlineliffit
   providedIn: 'root'
 })
 export class RegisterService {
-  Rest_API: string = 'https://api-clinic-1001.herokuapp.com/api/v1';
+  Rest_API: string = 'https://api-clinic-1001.herokuapp.com/api/v1/patient';
+  // Rest_API: string = 'http://localhost:3033/api/v1/patient';
   HttpHeaders = new HttpHeaders().set('Content-type', 'application/jason');
   constructor(private httpClient: HttpClient) { }
-  Register(data: registerlineliffitemview): Observable<any> {
-    let API_URL = `${this.Rest_API}/patient/create`;
+  Register(data: registerlineliffitemview): Observable<registerlineliffitemview> {
+    let API_URL = `${this.Rest_API}/createBylineliffservice`;
     return new Observable((obs) => {
-      this.httpClient.post<any>(API_URL, data).subscribe((result) => {
+      this.httpClient.post<registerlineliffitemview>(API_URL, data).subscribe((result) => {
         obs.next(result)
       }, (error: HttpErrorResponse) => {
-        this.handleError(error)
+        obs.error(error.error)
       })
     })
 

@@ -1,4 +1,5 @@
 export class patients {
+  id:string = '';
   idCard: string = '';
   firstName: string = '';
   lastName: string = '';
