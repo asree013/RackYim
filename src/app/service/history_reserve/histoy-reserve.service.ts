@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, observable , throwError } from 'rxjs';
 import { catchError , map } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { reserves } from 'src/app/components/reserve/reserve.type';
 
 
 @Injectable({
@@ -42,5 +43,27 @@ export class HistoyReserveService {
     }
     console.log(errorMessage);
     return throwError(errorMessage);
+  }
+
+  getlist(): Observable<any>{
+    return new Observable((obs) => {
+      let ItemList: reserves[] = [{
+        id: "Test",
+        bookingcode: "Test",
+        detail: "",
+        bookingstatus: 4,
+        bookingdetail: "",
+        patient: null,
+        datebooking: "",
+        typebookingId: "",
+        patientId: "",
+        userId: "",
+        companyId: "",
+        updatedAt: "",
+        createdAt: "",
+        message: ""
+      }];
+      obs.next(ItemList);
+    });
   }
 }
