@@ -9,6 +9,7 @@ import { ReserveModule } from "./components/reserve/reserve.module";
 import { HistoryReserveModule } from './components/history-reserve/history-reserve.module';
 import { FormsModule , ReactiveFormsModule } from "@angular/forms";
 import { CalendarReserveModule } from './components/calendar-reserve/calendar-reserve.module';
+import { ErrorpageComponent } from './components/errorpage/errorpage.component';
 
 
 
@@ -17,7 +18,8 @@ import { CalendarReserveModule } from './components/calendar-reserve/calendar-re
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ErrorpageComponent
   
   ],
   imports: [

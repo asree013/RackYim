@@ -6,7 +6,7 @@ export class reserves {
     detail: string;
     bookingstatus:number;
     bookingdetail:string;
-    patient:patients;
+    patient?:patients;
     datebooking:string;
     typebookingId:string;
     patientId:string;
