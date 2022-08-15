@@ -1,671 +1,273 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Prompt', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Prompt', sans-serif;
 }
 
 .container {
-    max-width: 100vh;
-    position: relative;
+  max-width: 100vh;
+  position: relative;
 }
 
 .barser img {
-    width: 95%;
-    margin-left: 5%;
-    position: fixed;
-    z-index: 0;
+  width: 100%;
+  margin-left: 1%;
+  margin-top: -2%;
+  position: fixed;
 }
-
 .serlica img {
-    width: 95%;
-    margin-top: 0%;
-    z-index: 0;
-    position: fixed;
+  width: 100%;
+  margin-top: 0%;
+  margin-left: -1%;
+  position: fixed;
 }
 
 .profile img {
-    width: 45%;
-    margin-top: -5%;
-    position: absolute;
+  width: 45%;
+  margin-top: 10%;
+  position: absolute;
 }
-
 .container img {
-    width: 15%;
-    margin-top: 20%;
-    margin-left: 40%;
+  width: 15%;
+  margin-top: 20%;
+  margin-left: 40%;
 }
 .container nav {
-    width: 50%;
-    margin-top: -10%;
-    margin-left: 55%;
+  width: 50%;
+  margin-top: -10%;
+  margin-left: 55%;
 }
 .container nav ul h2{
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
 }
 .container nav ul h3{
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
 }
 .container nav ul h2:hover{
-    color: #ff5ea2;
+  color: #ff5ea2;
 }
 .container nav ul h3:hover{
-    color: #ff5ea2;
+  color: #ff5ea2;
 }
 
 .ul{
-    max-width: 100%;
-    margin-top: 5%;
-    margin-left: 40%;
+  max-width: 100%;
+  margin-top: 5%;
+  margin-left: 50%;
 }
 .form-control label{
-    color:#777;
-    display: block;
-    margin-bottom: 5px;
+  color:#777;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .form-control{
-    position: relative;
-    margin-bottom: 2px;
-    padding-bottom: 20px;
+  position: relative;
+  margin-bottom: 2px;
+  padding-bottom: 20px;
 }
 
 .form-control input{
-    border:2px solid #f0f0f0;
-    border-radius: 4px;
-    display: block;
-    width: 50%;
-    padding: 10px;
-    font-size:14px;
+  border:2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 50%;
+  padding: 10px;
+  font-size:14px;
 }
-.form button{
-    cursor: pointer;
-    background-color: #6700c7;
-    color:#fff;
-    border-radius: 0px 15px 0 15px;
-    margin-top:20px;
-    margin-left: 100px;
-    width: 30%;
-    display: block;
-    font-size: 25px;
-    padding: 10px;
-}
-
-@media only screen and (max-width:1024px){
-    .barser img {
-        width: 100%;
-        margin-left: -1%;
-        margin-top: -3%;
-        z-index: -3;
-        position: fixed;
-    }
-
-    .serlica img {
-        width: 100%;
-        margin-top: 50%;
-        z-index: -2;
-        position: fixed;
-    }
-
-    .profile img {
-        width: 60%;
-        margin-top: 45%;
-        position: absolute;
-    }
-
-    .container {
-        width: 100%;
-        position: relative;
-    }
-
-    .container img {
-        width: 20%;
-        margin-top: 10%;
-        margin-left: 25%;
-    }
-
-    .container nav {
-        width: 50%;
-        margin-top: -11%;
-        margin-left: 45%;
-    }
-
-    .container nav ul h2{
-        text-decoration: none;
-        color: #000;
-        font-size: 19px;
-    }
-    .container nav ul h3{
-        text-decoration: none;
-        color: #000;
-        font-size: 25px;
-    }
-
-    .ul{
-        max-width: 100%;
-        margin-top: 20%;
-        margin-left: 55%;
-    }
-    .form-control label{
-        color:#777;
-        display: block;
-        margin-bottom: 5px;
-    }
-    
-    
-    .form-control{
-        position: relative;
-        margin-bottom: 2px;
-        padding-bottom: 20px;
-    }
-    
-    .form-control input{
-        border:2px solid #f0f0f0;
-        border-radius: 4px;
-        display: block;
-        width: 80%;
-        padding: 10px;
-        font-size:14px;
-    }
-    
-    .form button{
-        cursor: pointer;
-        background-color: #08179A;
-        color:#fff;
-        border-radius: 0px 15px 0 15px;
-        margin-top:20px;
-        margin-left: 65px;
-        width: 50%;
-        display: block;
-        font-size: 25px;
-        padding: 10px;
-    }
-}
-
-@media only screen and (max-width:700px){
-    .container {
-        width: 100%;
-    }
-
-    .container img {
-        width: 30%;
-        margin-top: 10%;
-        margin-left: 10%;
-    }
-
-    .container nav {
-        width: 50%;
-        margin-top: -20%;
-        margin-left: 40%;
-    }
-
-    .container nav ul h2{
-        text-decoration: none;
-        color: #000;
-        font-size: 10px;
-    }
-    .container nav ul h3{
-        text-decoration: none;
-        color: #000;
-        font-size: 18px;
-    }
-    .ul{
-        max-width: 100%;
-        margin-top: 80%;
-        margin-left: 5%;
-
-    }
-    .form-control label{
-        color:rgb(3, 2, 2);
-        display: block;
-        margin-bottom: 5px;
-    }
-    
-    .form-control{
-        position: relative;
-        margin-bottom: 2px;
-        padding-bottom: 20px;
-    }
-    
-    .form-control input{
-        border:2px solid #f0f0f0;
-        border-radius: 4px;
-        display: block;
-        width: 90%;
-        padding: 10px;
-        font-size:14px;
-    }
-
-    .form button{
-        cursor: pointer;
-        background-color: #E30397;
-        color:#fff;
-        border-radius: 0px 15px 0 15px;
-        margin-top:20px;
-        margin-left: 65px;
-        width: 50%;
-        display: block;
-        font-size: 20px;
-        padding: 10px;
-    }
-}
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Prompt', sans-serif;
-}
-
-.container {
-    max-width: 100vh;
-}
-
-.barser img {
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    position: absolute;
-}
-
-.container img {
-    width: 15%;
-    margin-top: 20%;
-    margin-left: 40%;
-}
-.container nav {
-    width: 50%;
-    margin-top: -10%;
-    margin-left: 55%;
-}
-.container nav ul h2{
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-}
-.container nav ul h3{
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-}
-.container nav ul h2:hover{
-    color: #ff5ea2;
-}
-.container nav ul h3:hover{
-    color: #ff5ea2;
-}
-
-.loit {
-    width: 40%;
-    margin-left: 40%;
-    color: #eee;
-    justify-content: center;
-    align-items: center;
-}
-  
-.calendar {
-    width: 35.5rem;
-    height: 32rem;
-    margin-top: 2%;
-    background-color: #2c2c2c;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-    border-radius: 1cm 1cm 0 0;
-}
-  
-.month {
-    width: 88.5%;
-    height: 8rem;
-    background-color: #3b0ac2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 1cm 1cm 0 0;
-    padding: 0 2rem;
-    text-align: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-  
-.month i {
-    font-size: 2.5rem;
-    cursor: pointer;
-}
-  
-.month h1 {
-    font-size: 3rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    margin-bottom: 1rem;
-}
-  
-.month p {
-    font-size: 1.6rem;
-}
-  
-.weekdays {
-    width: 100%;
-    height: 5rem;
-    padding: 0 0.4rem;
-    display: flex;
-    align-items: center;
-}
-  
-.weekdays div {
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-    width: calc(44.2rem / 7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
-  
-.days {
-    width: 110%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0.1rem;
-}
-  
-.days div {
-    font-size: 1.rem;
-    margin: 0.rem;
-    width: calc(20rem / 4);
-    height: 3.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-    transition: background-color 0.2s;
-}
-  
-.days div:hover:not(.today) {
-    background-color: #262626;
-    border: 0.2rem solid #777;
-    cursor: pointer;
-}
-  
-.prev-date,
-.next-date {
-    opacity: 0.5;
-}
-
-.today {
-    background-color: #e217d1;
+.submit{
+  cursor: pointer;
+  background-color: #6700c7;
+  color:#fff;
+  border-radius: 0px 15px 0 15px;
+  margin-top:20px;
+  margin-left: 100px;
+  width: 30%;
+  display: block;
+  font-size: 25px;
+  padding: 10px;
 }
 
 @media only screen and (max-width:1024px){
-    .barser img {
-        width: 100%;
-        height: 60%;
-        z-index: -2;
-        position: absolute;
-    }
+  .barser img {
+      width: 100%;
+      margin-left: 11%;
+      z-index: -3;
+      position: fixed;
+  }
 
-    .container {
-        width: 100%;
-    }
+  .serlica img {
+      width: 100%;
+      margin-top: 5%;
+      margin-left: -1%;
+      z-index: -2;
+      position: fixed;
+  }
 
-    .container img {
-        width: 20%;
-        margin-top: 10%;
-        margin-left: 25%;
-    }
+  .profile img {
+      width: 60%;
+      margin-top: 40%;
+      position: absolute;
+  }
 
-    .container nav {
-        width: 50%;
-        margin-top: -11%;
-        margin-left: 45%;
-    }
+  .container {
+      width: 100%;
+      position: relative;
+  }
 
-    .container nav ul h2{
-        text-decoration: none;
-        color: #000;
-        font-size: 19px;
-    }
-    .container nav ul h3{
-        text-decoration: none;
-        color: #000;
-        font-size: 25px;
-    }
+  .container img {
+      width: 20%;
+      margin-top: 10%;
+      margin-left: 25%;
+  }
 
-    .loit {
-        width: 100%;
-        height: 100vh;
-        margin-left: 15%;
-        color: #eee;
-        justify-content: center;
-        align-items: center;
-    }
-      
-    .calendar {
-        width: 35.6rem;
-        height: 32rem;
-        margin-top: 2%;
-        background-color: #2c2c2c;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-        border-radius: 1cm 1cm 0 0;
-    }
-      
-    .month {
-        width: 88.5%;
-        height: 8rem;
-        background-color: #3b0ac2;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 1cm 1cm 0 0;
-        padding: 0 2rem;
-        text-align: center;
-        text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-    }
-      
-    .month i {
-        font-size: 2.5rem;
-        cursor: pointer;
-    }
-      
-    .month h1 {
-        font-size: 3rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 0.2rem;
-        margin-bottom: 1rem;
-    }
-      
-    .month p {
-        font-size: 1.6rem;
-    }
-      
-    .weekdays {
-        width: 100%;
-        height: 5rem;
-        padding: 0 0.4rem;
-        display: flex;
-        align-items: center;
-    }
-      
-    .weekdays div {
-        font-size: 1.5rem;
-        font-weight: 400;
-        letter-spacing: 0.1rem;
-        width: calc(44.2rem / 7);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-    }
-      
-    .days {
-        width: 110%;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0.1rem;
-    }
-      
-    .days div {
-        font-size: 1.rem;
-        margin: 0.rem;
-        width: calc(20rem / 4);
-        height: 3.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-        transition: background-color 0.2s;
-    }
-      
-    .days div:hover:not(.today) {
-        background-color: #262626;
-        border: 0.2rem solid #777;
-        cursor: pointer;
-    }
-      
-    .prev-date,
-    .next-date {
-        opacity: 0.5;
-    }
-    
-    .today {
-        background-color: #e217d1;
-    }
+  .container nav {
+      width: 50%;
+      margin-top: -11%;
+      margin-left: 45%;
+  }
+
+  .container nav ul h2{
+      text-decoration: none;
+      color: #000;
+      font-size: 19px;
+  }
+  .container nav ul h3{
+      text-decoration: none;
+      color: #000;
+      font-size: 25px;
+  }
+  .ul{
+      max-width: 100%;
+      margin-top: 15%;
+      margin-left: 55%;
+  }
+  .form-control label{
+      color:#777;
+      display: block;
+      margin-bottom: 5px;
+  }
+
+
+  .form-control{
+      position: relative;
+      margin-bottom: 2px;
+      padding-bottom: 20px;
+  }
+
+  .form-control input{
+      border:2px solid #f0f0f0;
+      border-radius: 4px;
+      display: block;
+      width: 80%;
+      padding: 10px;
+      font-size:14px;
+  }
+
+  .form button{
+      cursor: pointer;
+      background-color: #08179A;
+      color:#fff;
+      border-radius: 0px 15px 0 15px;
+      margin-top:20px;
+      margin-left: 65px;
+      width: 50%;
+      display: block;
+      font-size: 25px;
+      padding: 10px;
+  }
 }
 
 @media only screen and (max-width:700px){
-    .barser img {
-        width: 100%;
-        height: 35%;
-        z-index: -2;
-        position: absolute;
-    }
-    .container {
-        width: 100%;
-    }
+  .barser img {
+      width: 100%;
+      margin-left: 11%;
+      margin-top: -3%;
+      position: fixed;
+  }
 
-    .container img {
-        width: 30%;
-        margin-top: 10%;
-        margin-left: 10%;
-    }
+  .serlica img {
+      width: 100%;
+      margin-top: 95%;
+      margin-left: -3%;
+      position: fixed;
+  }
 
-    .container nav {
-        width: 50%;
-        margin-top: -20%;
-        margin-left: 40%;
-    }
+  .profile img {
+      width: 100%;
+      margin-top:-5%;
+      position: absolute;
+  }
 
-    .container nav ul h2{
-        text-decoration: none;
-        color: #000;
-        font-size: 10px;
-    }
-    .container nav ul h3{
-        text-decoration: none;
-        color: #000;
-        font-size: 18px;
-    }
+  .container {
+      width: 100%;
+      position: relative;
+  }
 
-    .loit {
-        width: 100px;
-        height: 100vh;
-        margin: 0%;
-        color: #eee;
-        justify-content: center;
-        align-items: center;
-    }
-      
-    .calendar {
-        width: 23rem;
-        height: rem;
-        margin-left: 2%;
-        margin-top: 30%;
-        background-color: #2c2c2c;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-        border-radius: 1cm 1cm 0 0;
-    }
-      
-    .month {
-        width: 82%;
-        height: 6rem;
-        background-color: #3b0ac2;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 1cm 1cm 0 0;
-        padding: 0 2rem;
-        text-align: center;
-        text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-    }
-      
-    .month i {
-        font-size: 2.5rem;
-        cursor: pointer;
-    }
-      
-    .month h1 {
-        font-size: 1.8rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 0.2rem;
-        margin-bottom: 1rem;
-    }
-      
-    .month p {
-        font-size: 0.8rem;
-    }
-      
-    .weekdays {
-        width: 100%;
-        height: 5rem;
-        padding: 0 0.4rem;
-        display: flex;
-        align-items: center;
-    }
-      
-    .weekdays div {
-        font-size: 1.1rem;
-        font-weight: 400;
-        letter-spacing: 0.1rem;
-        width: calc(44.2rem / 7);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-    }
-      
-    .days {
-        width: 108%;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0.1rem;
-    }
-      
-    .days div {
-        font-size: 1rem;
-        margin: 0.rem;
-        width: calc(17.5rem / 5.5);
-        height: 3.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-        transition: background-color 0.2s;
-    }
-      
-    .days div:hover:not(.today) {
-        background-color: #262626;
-        border: 0.2rem solid #777;
-        cursor: pointer;
-    }
-      
-    .prev-date,
-    .next-date {
-        opacity: 0.1;
-    }
-    
-    .today {
-        background-color: #e217d1;
-    }
+  .container img {
+      width: 30%;
+      margin-top: 10%;
+      margin-left: 10%;
+  }
+
+  .container nav {
+      width: 50%;
+      margin-top: -20%;
+      margin-left: 40%;
+  }
+
+  .container nav ul h2{
+      text-decoration: none;
+      color: #000;
+      font-size: 10px;
+  }
+  .container nav ul h3{
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+  }
+  .ul{
+      max-width: 100%;
+      margin-top: 115%;
+      margin-left: 5%;
+
+  }
+  .form-control label{
+      color:rgb(3, 2, 2);
+      display: block;
+      margin-bottom: 5px;
+  }
+
+  .form-control{
+      position: relative;
+      margin-bottom: 2px;
+      padding-bottom: 20px;
+  }
+
+  .form-control input{
+      border:2px solid #f0f0f0;
+      border-radius: 4px;
+      display: block;
+      width: 90%;
+      padding: 10px;
+      font-size:14px;
+  }
+
+  .form button{
+      cursor: pointer;
+      background-color: #E30397;
+      color:#fff;
+      border-radius: 0px 15px 0 15px;
+      margin-top:20px;
+      margin-left: 65px;
+      width: 50%;
+      display: block;
+      font-size: 20px;
+      padding: 10px;
+  }
+
 }

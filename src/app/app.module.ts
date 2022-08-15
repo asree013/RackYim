@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { RegisterModule } from "./components/register/register.module";
-import { ReserveModule } from "./components/reserve/reserve.module";
 import { HistoryReserveModule } from './components/history-reserve/history-reserve.module';
 import { FormsModule , ReactiveFormsModule } from "@angular/forms";
 import { CalendarReserveModule } from './components/calendar-reserve/calendar-reserve.module';
@@ -26,13 +25,14 @@ import { ErrorpageComponent } from './components/errorpage/errorpage.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReserveModule,
+    MenuModule,
     RegisterModule,
     FormsModule,
     ReactiveFormsModule,
     HistoryReserveModule,
     CalendarModule,
-    CalendarReserveModule
+    CalendarReserveModule,
+    ReserveModule
   ],
   providers: [],
   bootstrap: [AppComponent]

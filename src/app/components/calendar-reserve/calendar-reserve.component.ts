@@ -14,16 +14,18 @@ import {  Router } from '@angular/router';
 
 
 export class CalendarReserveComponent implements OnInit {
+  
   public monthDays: Day[];
 
   public monthNumber: number;
   public year: number;
 
   public weekDaysName: string[] = [];
-  private id: number;
+
+  
 
   constructor(public calendarReserveService: CalendarReserveService,private router:Router) { }
-
+  
   ngOnInit(): void {
     this.setMonthDays(this.calendarReserveService.getCurrentMonth());
 
@@ -35,6 +37,7 @@ export class CalendarReserveComponent implements OnInit {
     this.weekDaysName.push("ส");
     this.weekDaysName.push("อา");
   }
+  
 
   onNextMonth(): void {
     this.monthNumber++;
@@ -62,6 +65,8 @@ export class CalendarReserveComponent implements OnInit {
     this.monthDays = days;
     this.monthNumber = this.monthDays[0].monthIndex;
     this.year = this.monthDays[0].year;
+    let monthIndex: number = (new Date().getMonth() + 2);
+    console.log(monthIndex);
   }
 
   selectDay(day: Day) {
@@ -70,4 +75,8 @@ export class CalendarReserveComponent implements OnInit {
       date:this.calendarReserveService.newFormatDate(day)
     }})
   }
+  addDays(date: Date, days: number): Date {
+    date.setDate(date.getDate() + days);
+    return date;
+}
 }

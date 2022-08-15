@@ -74,7 +74,7 @@
     justify-content: center;
     align-items: center;
 }
-  
+
 .calendar {
     width: 35.5rem;
     height: 36rem;
@@ -84,7 +84,7 @@
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
     border-radius: 1cm 1cm 0.5cm 0.5cm;
 }
-  
+
 .month {
     width: 88.5%;
     height: 8rem;
@@ -97,12 +97,12 @@
     text-align: center;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
 }
-  
+
 .month i {
     font-size: 2.5rem;
     cursor: pointer;
 }
-  
+
 .month h1 {
     font-size: 3rem;
     font-weight: 400;
@@ -110,12 +110,12 @@
     letter-spacing: 0.2rem;
     margin-bottom: 1rem;
 }
-  
+
 .month p {
     margin-top: -15%;
     font-size: 1.6rem;
 }
-  
+
 .day {
     margin-top: 2%;
     margin-left: 6%;
@@ -139,13 +139,14 @@
 .days {
     margin-top: 2%;
     margin-left: 6%;
-    padding-top: 4%;    
+    padding-top: 4%;
     width: 8%;
     display: inline-grid;
     font-size: 20;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
-  
+
 .days div {
     width: calc(20rem / 4);
     height: 3.5rem;
@@ -154,14 +155,19 @@
     align-items: center;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 50%);
     transition: background-color 0.2s;
+    cursor: pointer;
 }
-  
+.days div:hover {
+    transform: scale(2);
+}
+
 .days div:hover:not(.today) {
     background-color: #262626;
     border: 0.2rem solid #777;
     cursor: pointer;
+
 }
-  
+
 .prev-date,
 .next-date {
     opacity: 0.5;
@@ -197,6 +203,7 @@
         width: 70%;
         margin-top: 38%;
         margin-left: 0%;
+        z-index: -1;
         position: absolute;
     }
 
@@ -233,7 +240,7 @@
         justify-content: center;
         align-items: center;
     }
-      
+
     .calendar {
         width: 24rem;
         height: 28rem;
@@ -243,7 +250,7 @@
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
         border-radius: 1cm 1cm 0.5cm 0.5cm;
     }
-      
+
     .month {
         width: 83%;
         height: 5rem;
@@ -256,12 +263,12 @@
         text-align: center;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
     }
-      
+
     .month i {
         font-size: 2.5rem;
         cursor: pointer;
     }
-      
+
     .month h1 {
         font-size: 2rem;
         font-weight: 400;
@@ -270,12 +277,12 @@
         letter-spacing: 0.2rem;
         margin-bottom: -1rem;
     }
-      
+
     .month p {
         font-size: 1.3rem;
         margin-top: -6%;
     }
-      
+
     .day {
         margin-top: 2%;
         margin-left: 5.5%;
@@ -299,13 +306,13 @@
     .days {
         margin-top: 2%;
         margin-left: 6%;
-        padding-top: 4%;    
+        padding-top: 4%;
         width: 8%;
         display: inline-grid;
         font-size: 20;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
     }
-      
+
     .days div {
         font-size: 1rem;
         margin: 0.5rem;
@@ -317,18 +324,18 @@
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
         transition: background-color 0.2s;
     }
-      
+
     .days div:hover:not(.today) {
         background-color: #262626;
         border: 0.2rem solid #777;
         cursor: pointer;
     }
-      
+
     .prev-date,
     .next-date {
         opacity: 0.5;
     }
-    
+
     .today {
         background-color: #e217d1;
     }
@@ -340,18 +347,19 @@
         z-index: -1;
         position: fixed;
     }
-    
+
     .serlica img {
         width: 120%;
         margin-top: 116%;
         z-index: -1;
         position: fixed;
     }
-    
+
     .profile img {
         width: 100%;
         margin-top: 100%;
         position: absolute;
+        z-index: -2;
     }
 
     .container {
@@ -390,7 +398,7 @@
         justify-content: center;
         align-items: center;
     }
-      
+
     .calendar {
         width: 23rem;
         height: 28rem;
@@ -400,7 +408,7 @@
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
         border-radius: 1cm 1cm 0.5cm 0.5cm;
     }
-      
+
     .month {
         width: 82%;
         height: 5rem;
@@ -413,12 +421,12 @@
         text-align: center;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
     }
-      
+
     .month i {
         font-size: 2.5rem;
         cursor: pointer;
     }
-      
+
     .month h1 {
         font-size: 1.8rem;
         font-weight: 400;
@@ -426,12 +434,12 @@
         letter-spacing: 0.2rem;
         margin-bottom: 1rem;
     }
-      
+
     .month p {
         margin-top: -28%;
         font-size: 1.5rem;
     }
-      
+
     .day {
         margin-top: 2%;
         margin-left: 6%;
@@ -439,6 +447,7 @@
         display: inline-grid;
         font-size: 20;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+        cursor: pointer;
     }
       
     /* .weekdays div {
@@ -455,13 +464,14 @@
     .days {
         margin-top: 2%;
         margin-left: 6%;
-        padding-top: 4%;    
+        padding-top: 4%;
         width: 8%;
         display: inline-grid;
         font-size: 20;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+        cursor: pointer;
     }
-      
+
     .days div {
         font-size: 0.9rem;
         margin: 0.rem;
@@ -472,19 +482,20 @@
         align-items: center;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
         transition: background-color 0.2s;
+        cursor: pointer;
     }
-      
+
     .days div:hover:not(.today) {
         background-color: #262626;
         border: 0.2rem solid #777;
         cursor: pointer;
     }
-      
+
     .prev-date,
     .next-date {
         opacity: 0.1;
     }
-    
+
     .today {
         background-color: #e217d1;
     }
