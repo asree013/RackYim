@@ -1,9 +1,10 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { ReserveService } from 'src/app/service/reserve/reserve.service';
-import { FormGroup , FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { booking } from '../../history-reserve/history_reserve_type';
 import Swal from 'sweetalert2';
+import { LineService } from 'src/app/Base/service/line/line.service';
 
 @Component({
   selector: 'app-reserve',
@@ -11,33 +12,41 @@ import Swal from 'sweetalert2';
   styleUrls: ['./reserve.component.css']
 })
 export class ReserveComponent implements OnInit {
-  
-  item:booking = new booking();
+
+  item: booking = new booking();
 
   constructor(
     public FormBuilder: FormBuilder,
     private router: Router,
     private ngZone: NgZone,
-    private reserveService: ReserveService
+    private reserveService: ReserveService,
+    private lineservice:LineService
   ) { }
-
+  listtypeReserve: any
   ngOnInit(): void {
-    
-  }
 
+  }
+  onInitData(){
+    this.lineservice.lineInit().subscribe((result)=>{
+      this.reserveService.getDorpdonwTypeooking(result.companyId).subscribe((result)=>{
+        this.listtypeReserve = result
+      })
+    })
+   
+  }
   onSubmit(): any {
 
     console.log(this.item);
-    
+
     this.reserveService.Reserves(this.item)
-    .subscribe(()=> {
-      console.log("ทำการจองสำเร็จ");
-    }, (err) => {
-      console.log(err);
-    })
-  
+      .subscribe(() => {
+        console.log("ทำการจองสำเร็จ");
+      }, (err) => {
+        console.log(err);
+      })
+
   }
-  ReserveSweetAlert(){
+  ReserveSweetAlert() {
     {
       Swal.fire({
         title: 'คุณแน่ใจที่จะจอง?',

@@ -4,9 +4,11 @@ import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { patients } from './../register-type';
 import { RegisterService } from './../../../service/register/register.service';
-import { LineLiffService } from 'src/app/service/line-liff/line-liff.service';
+
 import { LineService } from 'src/app/Base/service/line/line.service';
 import Swal from 'sweetalert2';
+import { registerlineliffitemview } from 'src/app/Base/models/registerlineliffitemview';
+import { profile } from 'src/app/Base/models/profile';
 
 
 
@@ -19,77 +21,144 @@ import Swal from 'sweetalert2';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  onload: boolean = true
   item: patients = new patients();
-
-
+  profile: profile = new profile()
+  ItemView = new registerlineliffitemview()
   constructor(
     public FormBuilder: FormBuilder,
     private registerService: RegisterService,
     private lineservice: LineService,
     private router: Router
-    
+
   ) { }
 
   async ngOnInit() {
-    await this.lineservice.lineInit();
+
     await this.onInitailData();
   }
   onInitailData() {
-    let profile = this.lineservice.getProfile();
-    if (profile) {
-      this.item.lineliffId = profile.userId;
-      this.item.companyId = profile.companyId;
-      console.log(profile);
-      
-    }
+    this.lineservice.lineInit().subscribe((result) => {
+      this.ItemView.profile = result;
+      this.item.companyId = result.companyId
+      this.onload = !this.onload
+    });
+
   }
   onSubmit(): any {
-    if(this.item.idCard.length < 1){
-      Swal.fire("ไม่ได้ใส่เลขบัตรประชาชน");
+    if (this.item.idCard.length < 1) {
+      Swal.fire({
+        title: 'การแจ้งเตือน',
+        text: "ไม่ได้ใส่เลขบัตรประชาชน",
+        icon: 'error',
+        showConfirmButton: true
+      });
       return 0
     }
-    if(this.item.firstName.length < 1){
-      Swal.fire("ไม่ได้ใส่ชื่อ");
+    if (this.item.firstName.length < 1) {
+      Swal.fire({
+        title: 'การแจ้งเตือน',
+        text: "ไม่ได้ใส่ชื่อ",
+        icon: 'error',
+        showConfirmButton: true
+      });
+
       return 0
     }
-    if(this.item.lastName.length < 1){
-      Swal.fire("ไม่ได้ใส่นามสกุล");
+    if (this.item.lastName.length < 1) {
+      Swal.fire({
+        title: 'การแจ้งเตือน',
+        text: "ไม่ได้ใส่นามสกุล",
+        icon: 'error',
+        showConfirmButton: true
+      });
+
       return 0
     }
-    if(this.item.phonenumber.length < 1){
-      Swal.fire("ไม่ได้ใส่เบอร์โทร");
+    if (this.item.phonenumber.length < 1) {
+      Swal.fire({
+        title: 'การแจ้งเตือน',
+        text: "ไม่ได้ใส่เบอร์โทร",
+        icon: 'error',
+        showConfirmButton: true
+      });
+
+
       return 0
     }
-    if(this.item.email.length < 1){
-      Swal.fire("ไม่ได้ใส่อีเมล");
+    if (this.item.email.length < 1) {
+      Swal.fire({
+        title: 'การแจ้งเตือน',
+        text: "ไม่ได้ใส่อีเมล",
+        icon: 'error',
+        showConfirmButton: true
+      });
+
       return 0
     }
-    if(this.item.address.length < 1){
-      Swal.fire("ไม่ได้ใส่ที่อยู่");
+    if (this.item.address.length < 1) {
+      Swal.fire({
+        title: 'การแจ้งเตือน',
+        text: "ไม่ได้ใส่ที่อยู่",
+        icon: 'error',
+        showConfirmButton: true
+      });
+
       return 0
     }
-    if(this.item.gender.length < 1){
-      Swal.fire("ไม่ได้ระบุเพศ");
+    if (this.item.gender.length < 1) {
+      Swal.fire({
+        title: 'การแจ้งเตือน',
+        text: "ไม่ได้ระบุเพศ",
+        icon: 'error',
+        showConfirmButton: true
+      });
+
       return 0
     }
-    if(this.item.congenitaldisease.length < 1){
-      Swal.fire("ไม่ได้ใส่โรคประจำตัว, หากไม่มีให้ระบุว่า 'ไม่มี'");
+    if (this.item.congenitaldisease.length < 1) {
+      Swal.fire({
+        title: 'การแจ้งเตือน',
+        text: "ไม่ได้ใส่โรคประจำตัว, หากไม่มีให้ระบุว่า ไม่มี",
+        icon: 'error',
+        showConfirmButton: true
+      });
+
       return 0
     }
-    if(this.item.drugallergy.length < 1){
-      Swal.fire("ไม่ได้ระบุ, หากไม่มีให้ระบุว่า 'ไม่มี'");
+    if (this.item.drugallergy.length < 1) {
+      Swal.fire({
+        title: 'การแจ้งเตือน',
+        text: "ไม่ได้ระบุ, หากไม่มีให้ระบุว่า ไม่มี",
+        icon: 'error',
+        showConfirmButton: true
+      });
+
+
       return 0
     }
-    this.reComplet();
-    this.registerService.Register(this.item).subscribe((result: patients) => {
-      console.log("สมัครสมาชิกเรียบร้อย", result);
-    }, (err: Error) => {
-      console.log(err);
-    },)
-    this.router.navigate([`/menu`]);
+    this.ItemView.patient = this.item;
+    this.registerService.Register(this.ItemView).subscribe((result: registerlineliffitemview) => {
+      Swal.fire({
+        title: 'การแจ้งเตือน',
+        text: "ลงทะเบียนสมาชิกเรียบร้อย",
+        icon: 'success',
+        showConfirmButton: true
+      }).then(() => {
+        this.router.navigate([`/menu`]);
+      })
+    }, (err: any) => {
+      Swal.fire({
+        title: 'การแจ้งเตือน',
+        text: err.msg,
+        icon: 'error',
+        showConfirmButton: true
+      })
+    })
+
   }
 
-  reComplet(){
+  reComplet() {
     Swal.fire("สมัครสมาชิกเรียบร้อย");
   }
 }

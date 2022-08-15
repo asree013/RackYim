@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { secretkey } from '../../constant/cons';
 import { profile } from '../../models/profile';
 import { CompanyService } from '../company/company.service';
@@ -7,25 +8,26 @@ declare var liff: any
   providedIn: 'root'
 })
 export class LineService {
-  private profileUsers: profile = new profile();
+  companyId: string
   constructor(private company: CompanyService) { }
-  lineInit() {
- 
-      this.company.getLiffId(secretkey).subscribe((result) => {
-        liff.init({ liffId: result.lineliffId }).then(async () => {
-          if (liff.isLoggedIn()) {
-            this.profileUsers = await liff.getProfile()
-            this.profileUsers.companyId = result.companyId;
+  lineInit(): Observable<profile> {
+    return new Observable((obs) => {
+      this.company.getLiffId(secretkey).subscribe(async (result) => {
+        await liff.init({ liffId: result.lineliffId }).then(async () => {
+          if (await liff.isLoggedIn()) {
+            let profile:profile = await liff.getProfile()
+            profile.companyId = result.companyId;
+            obs.next(profile)
           } else {
-            liff.logout()
             this.logIn()
           }
-  
-        },(error: any)=>{
+
+        }, (error: any) => {
           console.log(error.code, error.message);
         })
-        console.log(liff);
       })
+    })
+
   }
 
   logIn() {
@@ -35,7 +37,12 @@ export class LineService {
     liff.logout()
     window.location.reload()
   }
-  getProfile(): profile {
-    return  (this.profileUsers.userId !== null)  ? this.profileUsers : null
+  getProfile(): Observable<profile> {
+    return new Observable((obs) => {
+      liff.getProfile().then((result: profile) => {
+        result.companyId = this.companyId
+        obs.next(result)
+      })
+    })
   }
 }

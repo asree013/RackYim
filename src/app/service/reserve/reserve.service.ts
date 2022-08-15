@@ -3,6 +3,8 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { reserves } from 'src/app/components/reserve/reserve.type';
+import { GatewayService } from 'src/app/Base/service/gateways/gateway.service';
+import { Selecter } from 'src/app/Base/models/selecter';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +14,7 @@ export class ReserveService {
 
   HttpHeaders = new HttpHeaders().set('Content-type', 'application/jason');
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient,private gateway:GatewayService) { }
 
   Reserves(data: reserves): Observable<any> {
     let API_URL = `${this.Reserve_API}`;
@@ -33,7 +35,9 @@ export class ReserveService {
     return this.httpClient.delete(API_URL, { headers: this.HttpHeaders })
   }
 
-
+  getDorpdonwTypeooking(companyId:string):Observable<Selecter[]>{
+    return  this.gateway.get(`/dropdown/typebooking/${companyId}`)
+  }
 
   handleError(error: HttpErrorResponse) {
     let errorMessage = '';
