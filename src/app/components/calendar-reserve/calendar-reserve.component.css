@@ -144,6 +144,7 @@
     display: inline-grid;
     font-size: 20;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .days div {
@@ -154,12 +155,17 @@
     align-items: center;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 50%);
     transition: background-color 0.2s;
+    cursor: pointer;
+}
+.days div:hover {
+    transform: scale(2);
 }
 
 .days div:hover:not(.today) {
     background-color: #262626;
     border: 0.2rem solid #777;
     cursor: pointer;
+
 }
 
 .prev-date,
@@ -441,6 +447,7 @@
         display: inline-grid;
         font-size: 20;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+        cursor: pointer;
     }
       
     /* .weekdays div {
@@ -462,6 +469,7 @@
         display: inline-grid;
         font-size: 20;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+        cursor: pointer;
     }
 
     .days div {
@@ -474,6 +482,7 @@
         align-items: center;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
         transition: background-color 0.2s;
+        cursor: pointer;
     }
 
     .days div:hover:not(.today) {

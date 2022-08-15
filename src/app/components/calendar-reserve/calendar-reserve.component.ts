@@ -21,7 +21,7 @@ export class CalendarReserveComponent implements OnInit {
   public year: number;
 
   public weekDaysName: string[] = [];
-  private id: number;
+
   
 
   constructor(public calendarReserveService: CalendarReserveService,private router:Router) { }

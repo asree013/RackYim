@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 
 
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -24,7 +25,9 @@ export class RegisterComponent implements OnInit {
   constructor(
     public FormBuilder: FormBuilder,
     private registerService: RegisterService,
-    private lineservice: LineService
+    private lineservice: LineService,
+    private router: Router
+    
   ) { }
 
   async ngOnInit() {
@@ -77,11 +80,17 @@ export class RegisterComponent implements OnInit {
       Swal.fire("ไม่ได้ระบุ, หากไม่มีให้ระบุว่า 'ไม่มี'");
       return 0
     }
+    this.reComplet();
     this.registerService.Register(this.item).subscribe((result: patients) => {
       console.log("สมัครสมาชิกเรียบร้อย", result);
     }, (err: Error) => {
       console.log(err);
     },)
+    this.router.navigate([`/menu`]);
+  }
+
+  reComplet(){
+    Swal.fire("สมัครสมาชิกเรียบร้อย");
   }
 }
 
