@@ -4,6 +4,7 @@ import { RegisterComponent } from './components/register/register/register.compo
 import { ReserveComponent } from './components/reserve/reserve/reserve.component';
 import { HistoryReserveComponent } from './components/history-reserve/history-reserve.component';
 import { CalendarReserveComponent } from "./components/calendar-reserve/calendar-reserve.component";
+import { MenuComponent } from './components/menu/menu.component';
 
 const routes: Routes = [
   {path:'',pathMatch:'full',redirectTo: 'register'},

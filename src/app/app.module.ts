@@ -9,6 +9,8 @@ import { HistoryReserveModule } from './components/history-reserve/history-reser
 import { FormsModule , ReactiveFormsModule } from "@angular/forms";
 import { CalendarReserveModule } from './components/calendar-reserve/calendar-reserve.module';
 import { ErrorpageComponent } from './components/errorpage/errorpage.component';
+import { MenuModule } from './components/menu/menu.module';
+import { ReserveModule } from './components/reserve/reserve.module';
 
 
 
