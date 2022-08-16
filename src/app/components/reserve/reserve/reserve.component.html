@@ -30,7 +30,7 @@
             <label for="typebookingId">จองคิวเรื่อง</label>
             <label for=""></label>
             <select (change)="getTypebooking($event)" id="detail">
-                <option [value]="null">--------โปรดเลือก-------</option>
+                <option [value]="null">โปรดเลือก</option>
                 <option *ngFor="let item of listtypeReserve" [value]="item.id">{{item.description}}</option>
             </select>
         </div>

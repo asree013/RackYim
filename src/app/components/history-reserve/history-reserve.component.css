@@ -6,6 +6,21 @@
 
 .container {
     max-width: 100vh;
+    position: relative;
+}
+
+.barser img {
+    width: 100%;
+    margin-top: -2%;
+    z-index: -1;
+    position: fixed;
+}
+
+.serlica img {
+    width: 100%;
+    margin-top: 0%;
+    z-index: -1;
+    position: fixed;
 }
 
 .container img {
@@ -93,14 +108,21 @@
 
 @media only screen and (max-width:1024px){
     .barser img {
-        width: 60%;
-        margin-left: 50%;
-        z-index: -2;
-        position: absolute;
+        width: 100%;
+        z-index: -1;
+        position: fixed;
+    }
+    
+    .serlica img {
+        width: 100%;
+        margin-top: 52%;
+        z-index: -1;
+        position: fixed;
     }
 
     .container {
         width: 100%;
+        position: relative;
     }
 
     .container img {
@@ -185,14 +207,21 @@
 
 @media only screen and (max-width:700px){
     .barser img {
-        width: 65%;
-        margin-left: 50%;
-        z-index: -2;
-        position: absolute;
+        width: 100%;
+        z-index: -1;
+        position: fixed;
+    }
+    
+    .serlica img {
+        width: 100%;
+        margin-top: 135%;
+        z-index: -1;
+        position: fixed;
     }
 
     .container {
         width: 100%;
+        position: relative;
     }
 
     .container img {

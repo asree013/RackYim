@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+}
+
+.container {
+    max-width: 100vh;
+    position: relative;
+}
+
+.barser img {
+    width: 100%;
+    margin-left: 0%;
+    margin-top: -6%;
+    z-index: -1;
+    position: fixed;
+}
+.serlica img {
+    width: 100%;
+    margin-top: -5%;
+    margin-left: -1%;
+    z-index: -1;
+    position: fixed;
+}
+
+.container img {
+    width: 25%;
+    margin-top: 20%;
+    margin-left: 60%;
+}
+
+.container nav {
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 55%;
+}
+
+.container nav ul h2{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+.container nav ul h3{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    margin-left: 30%;
+}
+.container nav ul h2:hover{
+    color: #ff5ea2;
+}
+.container nav ul h3:hover{
+    color: #ff5ea2;
+}
+
+.bar{
+    display: flex;
+    padding-left: 25%;
+    margin-top: 3%;
+}
+
+.card-header {
+    margin-left: 35%;
+    font-size: medium;
+}
+
+
+@media only screen and (max-width:1024px){
+    .container {
+        max-width: 100vh;
+        position: relative;
+    }
+    
+    .barser img {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 0%;
+        z-index: -1;
+        position: fixed;
+    }
+    .serlica img {
+        width: 100%;
+        margin-top: 52%;
+        z-index: -1;
+        position: fixed;
+    }
+    .container img {
+        width: 25%;
+        margin-top: 20%;
+        margin-left: 38%;
+    }
+    
+    .container nav {
+        width: 50%;
+        margin-top: 2%;
+        margin-left: 32%;
+    }
+    
+    .container nav ul h2{
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+    }
+    .container nav ul h3{
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+        margin-left: 30%;
+    }
+    .container nav ul h2:hover{
+        color: #ff5ea2;
+    }
+    .container nav ul h3:hover{
+        color: #ff5ea2;
+    }
+
+    .card1 {
+        margin-top: 0%;
+        margin-left: -5%;
+    }
+    
+    .card-header {
+        margin-left: 35%;
+        font-size: medium;
+    }
+
+    .card3 {
+        margin-top: 50%;
+        margin-left: -68%;
+    } 
+    
+}
+
+@media only screen and (max-width:700px){
+    .container {
+        max-width: 100vh;
+        position: relative;
+    }
+    
+    .barser img {
+        width: 100%;
+        margin-left: 0%;
+        margin-top: -2%;
+        z-index: -1;
+        position: fixed;
+    }
+    .serlica img {
+        width: 100%;
+        margin-left: -2%;
+        margin-top: 102%;
+        z-index: -1;
+        position: fixed;
+    }
+    .container img {
+        width: 25%;
+        margin-top: 20%;
+        margin-left: 38%;
+    }
+    
+    .container nav {
+        width: 50%;
+        margin-top: 2%;
+        margin-left: 28%;
+    }
+    
+    .container nav ul h2{
+        text-decoration: none;
+        color: #000;
+        font-size: 11px;
+    }
+    .container nav ul h3{
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+        margin-top: 6%;
+        margin-left: 30%;
+    }
+    .container nav ul h2:hover{
+        color: #ff5ea2;
+    }
+    .container nav ul h3:hover{
+        color: #ff5ea2;
+    }
+
+    .card-header {
+        margin-left: 35%;
+        font-size: medium;
+    }
+
+    .card1 {
+        margin-top: 0%;
+        margin-left: -10%;
+    }
+    
+    .card2 {
+        margin-top: 90%;
+        margin-left: -83%;
+    } 
+    
+    .card3 {
+        margin-top: 180%;
+        margin-left: -87%;
+    } 
+}
