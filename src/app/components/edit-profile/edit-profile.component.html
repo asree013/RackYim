@@ -1,0 +1,87 @@
+<ng-container *ngIf="!onload">
+
+    <div class="barser">
+        <img src="./assets/image/topbg.png" />
+    </div>
+
+    <div class="serlica">
+        <img src="./assets/image/footbg.png" />
+    </div>
+
+    <div class="container">
+        <div class="brand">
+            <img src="./assets/image/Logo-RukjimClinic.png" />
+            <nav>
+                <ul>
+                    <h2>คลินิกรักยิ้ม | Rakyim Dental CLinic</h2>
+                    <h3>แก้ไขโปรไฟล์</h3>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="profile">
+        <img src="./assets/image/profile.png" />
+    </div>
+
+    <div class="ul">
+
+        <h2>แบบฟอร์มการแก้ไขโปรไฟล์ออนไลน์</h2>
+        <div class="form-group">
+            <input type="radio" class="form-control" [value]="'M'"  required />
+            <label for="gender"> ชาย</label><br />
+            <input type="radio" class="form-control" [value]="'F'"  required />
+            <label for="gender"> หญิง</label><br />
+        </div>
+        <div class="form-control">
+            <label for="idCard">หมายเลขบัตรประชาชน</label>
+            <input type="text" name="" id="username" placeholder="Enter Your id card"  required />
+        </div>
+        <div class="form-control">
+            <label for="firstName">ชื่อ</label>
+            <input type="text" placeholder="Enter Your Username"  required />
+        </div>
+        <div class="form-control">
+            <label for="lastName">นามสกุล</label>
+            <input type="text" placeholder="Enter Your lastName"  required />
+        </div>
+        <div class="form-control">
+            <label for="phonenumber">โทรศัพท์</label>
+            <input type="text" placeholder="Enter Your Telephone"  required />
+        </div>
+        <div class="form-control">
+            <label for="email">อีเมล</label>
+            <input type="text" placeholder="Enter Your email"  required />
+        </div>
+        <div class="form-control">
+            <label for="address">ที่อยู่</label>
+            <input type="text" placeholder="Enter Your address"  required />
+        </div>
+        <div class="form-control">
+            <label for="detail">หมายเหตุ</label>
+            <input type="text" placeholder="Enter Your detail"  required />
+        </div>
+
+        <div class="form-control">
+            <label for="congenitaldisease">โรคประจำตัว</label>
+            <input type="text" placeholder="หากไม่มี ให้ระบุว่าไม่มี"  required />
+        </div>
+        <div class="form-control">
+            <label for="drugallergy">การแพ้ยา</label>
+            <input type="text" placeholder="หากไม่มี ให้ระบุว่าไม่มี"  required />
+        </div>
+        <div>
+            <input type="checkbox" class="form-control" [value]="1"  required />
+            <label for="pregnant"> ตั้งครรภ์</label><br />
+        </div>
+        <!-- <button type="submit" (click)="onSubmit()">ตกลง</button> -->
+        <button class="submit" (click)="onSubmit()">ตกลง</button>
+
+    </div>
+
+
+</ng-container>
+
+<ng-container *ngIf="onload">
+
+</ng-container>

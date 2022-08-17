@@ -21,4 +21,8 @@ export class MenuComponent implements OnInit {
     this.router.navigate([`/history-reserve`])
   }
 
+  gotoEditProfile(){
+    this.router.navigate([`/edit-profile`])
+  }
+
 }

@@ -1,48 +1,38 @@
-
-import { Component, OnInit, NgZone } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormBuilder } from '@angular/forms';
-import { patients } from './../register-type';
-import { RegisterService } from './../../../service/register/register.service';
+import { Component, OnInit } from '@angular/core';
 import { LineService } from 'src/app/Base/service/line/line.service';
 import Swal from 'sweetalert2';
 import { registerlineliffitemview } from 'src/app/Base/models/registerlineliffitemview';
 import { profile } from 'src/app/Base/models/profile';
-
-
-
-
-
+import { Router } from '@angular/router';
+import { FormBuilder } from '@angular/forms';
+import { patients } from '../register/register-type';
+import { EditProfileService } from 'src/app/service/edit-profile/edit-profile.service';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-edit-profile',
+  templateUrl: './edit-profile.component.html',
+  styleUrls: ['./edit-profile.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class EditProfileComponent implements OnInit {
   onload: boolean = true
   item: patients = new patients();
   profile: profile = new profile()
   ItemView = new registerlineliffitemview()
-  constructor(
-    public FormBuilder: FormBuilder,
-    private registerService: RegisterService,
+  constructor( public FormBuilder: FormBuilder,
+    private editProfileService: EditProfileService,
     private lineservice: LineService,
     private router: Router
+) { }
 
-  ) { }
-
-  async ngOnInit() {
-
-    await this.onInitailData();
+  async ngOnInit(){
+    await this.onTnitailData();
   }
-  onInitailData() {
+  onTnitailData(){
     this.lineservice.lineInit().subscribe((result) => {
       this.ItemView.profile = result;
       this.item.companyId = result.companyId
       this.onload = !this.onload
     });
-
   }
   onSubmit(): any {
     if (this.item.idCard.length < 1) {
@@ -137,7 +127,7 @@ export class RegisterComponent implements OnInit {
       return 0
     }
     this.ItemView.patient = this.item;
-    this.registerService.Register(this.ItemView).subscribe((result: registerlineliffitemview) => {
+    this.editProfileService.EditerProfile(this.ItemView).subscribe((result: registerlineliffitemview) => {
       Swal.fire({
         title: 'การแจ้งเตือน',
         text: "ลงทะเบียนสมาชิกเรียบร้อย",
@@ -160,6 +150,5 @@ export class RegisterComponent implements OnInit {
   reComplet() {
     Swal.fire("สมัครสมาชิกเรียบร้อย");
   }
+
 }
-
-
