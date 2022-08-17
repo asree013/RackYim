@@ -1,5 +1,5 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ReserveService } from 'src/app/service/reserve/reserve.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { booking } from '../../history-reserve/history_reserve_type';
@@ -8,6 +8,7 @@ import { LineService } from 'src/app/Base/service/line/line.service';
 import { Selecter } from 'src/app/Base/models/selecter';
 import { Booking } from 'src/app/Base/models/booking';
 import { PatientService } from 'src/app/service/patient/patient.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-reserve',
@@ -20,6 +21,7 @@ export class ReserveComponent implements OnInit {
   constructor(
     public FormBuilder: FormBuilder,
     private router: Router,
+    private path: ActivatedRoute,
     private ngZone: NgZone,
     private reserveService: ReserveService,
     private lineservice:LineService,
@@ -35,24 +37,32 @@ export class ReserveComponent implements OnInit {
         this.listtypeReserve = result;
         this.onload = !this.onload;
       })
-      this.patient.getPatientByLineliffId(result.userId).subscribe((result)=>{
+      this.patient.getPatientByLineliffId(result.userId).subscribe((result:any)=>{
         console.log(result);
-        this.item.patient = result;
-        this.item.patientId = result.id;
+        if (result.data) {
+          this.item.patient = result.data;
+          this.item.patientId = result.data.id;
+          this.item.datebooking = this.path.snapshot.queryParams['date']
+        }else{
+          this.router.navigate(['menu'])
+        }
+       
       })
       this.item.companyId = result.companyId;
     })
   }
-  onSubmit(): any {
-    this.item.bookingstatus = 4;
-    console.log(this.item);
-
-    this.reserveService.Reserves(this.item)
+  onSubmit(): Observable<boolean> {
+    return new Observable((obs)=>{
+      this.reserveService.Reserves(this.item)
       .subscribe(() => {
         console.log("ทำการจองสำเร็จ");
+        obs.next(true)
       }, (err) => {
         console.log(err);
+        obs.error(false)
       })
+    })
+    
 
   }
   ReserveSweetAlert() {
@@ -66,12 +76,22 @@ export class ReserveComponent implements OnInit {
         cancelButtonText: 'ไม่, ฉันยังไม่จอง',
       }).then((result) => {
         if (result.value) {
-          this.onSubmit()
-          Swal.fire(
-            'ทำการจอง!',
-            'คุณได้จองคิวเป็นที่เรียบร้อย.',
-            'success'
-          );
+          this.onSubmit().subscribe(()=>{
+            Swal.fire({
+              title: 'การเเจ้งเตือน?',
+              text: 'คุณทำการจองสำเร็จ',
+              icon: 'success',
+            }).then(()=>{
+              this.router.navigate(['history-reserve']).then()
+            });
+          },(err)=>{
+            Swal.fire({
+              title: 'การเเจ้งเตือน?',
+              text: 'คุณทำการจองไม่สำเร็จ',
+              icon: 'error',
+            })
+          })
+          
         } else if (result.dismiss === Swal.DismissReason.cancel) {
           Swal.fire('ยกเลิก', '(คูณยังไม่ได้ทำการจอง)', 'error');
         }

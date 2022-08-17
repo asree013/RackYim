@@ -12,13 +12,14 @@ import { Booking } from 'src/app/Base/models/booking';
 })
 export class ReserveService {
   Reserve_API: string = 'https://api-clinic-1001.herokuapp.com/api/v1/booking';
+  // Reserve_API: string = 'http://localhost:3033/api/v1/booking';
 
   HttpHeaders = new HttpHeaders().set('Content-type', 'application/jason');
 
-  constructor(private httpClient: HttpClient,private gateway:GatewayService) { }
+  constructor(private httpClient: HttpClient, private gateway: GatewayService) { }
 
   Reserves(data: Booking): Observable<any> {
-    let API_URL = `${this.Reserve_API}`;
+    let API_URL = `${this.Reserve_API}/create`;
     return this.httpClient.post(API_URL, data)
       .pipe(
         catchError(this.handleError)
@@ -31,13 +32,13 @@ export class ReserveService {
     let API_URL = `${this.Reserve_API}/delete${id}`;
     return this.httpClient.delete(API_URL, { headers: this.HttpHeaders })
   }
-  gettyptlist(companyid:string): Observable<any> {
+  gettyptlist(companyid: string): Observable<any> {
     let API_URL = `${this.Reserve_API}/typebooking/${companyid}`;
     return this.httpClient.delete(API_URL, { headers: this.HttpHeaders })
   }
 
-  getDorpdonwTypeooking(companyId:string):Observable<Selecter[]>{
-    return  this.gateway.get(`/dropdown/typebooking/${companyId}`)
+  getDorpdonwTypeooking(companyId: string): Observable<Selecter[]> {
+    return this.gateway.get(`/dropdown/typebooking/${companyId}`)
   }
 
   handleError(error: HttpErrorResponse) {

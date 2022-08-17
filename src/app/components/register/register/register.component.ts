@@ -9,7 +9,8 @@ import { LineService } from 'src/app/Base/service/line/line.service';
 import Swal from 'sweetalert2';
 import { registerlineliffitemview } from 'src/app/Base/models/registerlineliffitemview';
 import { profile } from 'src/app/Base/models/profile';
-
+import { PatientService } from 'src/app/service/patient/patient.service';
+import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -29,7 +30,8 @@ export class RegisterComponent implements OnInit {
     public FormBuilder: FormBuilder,
     private registerService: RegisterService,
     private lineservice: LineService,
-    private router: Router
+    private router: Router,
+    private patientService:PatientService
 
   ) { }
 
@@ -41,9 +43,18 @@ export class RegisterComponent implements OnInit {
     this.lineservice.lineInit().subscribe((result) => {
       this.ItemView.profile = result;
       this.item.companyId = result.companyId
-      this.onload = !this.onload
+      this.item.id = uuidv4()
+      this.getPatientByLiffId(result.userId)
     });
 
+  }
+  getPatientByLiffId(liffId:string){
+    this.patientService.getPatientByLineliffId(liffId).subscribe((result:any)=>{
+      if (result.data) {
+        this.router.navigate(['menu'])
+      }
+      this.onload = !this.onload
+    })
   }
   onSubmit(): any {
     if (this.item.idCard.length < 1) {

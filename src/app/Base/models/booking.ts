@@ -7,7 +7,7 @@ export class Booking {
     id: string;
     bookingcode: string;
     detail: string;
-    bookingstatus:number;
+    bookingstatus:number =4;
     bookingdetail:bookingdetail;
     patient:patients;
     datebooking:string;
