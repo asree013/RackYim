@@ -43,7 +43,7 @@
         </div>
         <div class="form-control">
             <label for="lastName">นามสกุล</label>
-            <input type="text" placeholder="Enter Your Email" [(ngModel)]="item.lastName" required />
+            <input type="text" placeholder="Enter Your lastName" [(ngModel)]="item.lastName" required />
         </div>
         <div class="form-control">
             <label for="phonenumber">โทรศัพท์</label>
@@ -51,24 +51,24 @@
         </div>
         <div class="form-control">
             <label for="email">อีเมล</label>
-            <input type="text" placeholder="Enter Your Telephone" [(ngModel)]="item.email" required />
+            <input type="text" placeholder="Enter Your email" [(ngModel)]="item.email" required />
         </div>
         <div class="form-control">
             <label for="address">ที่อยู่</label>
-            <input type="text" placeholder="Enter Your Telephone" [(ngModel)]="item.address" required />
+            <input type="text" placeholder="Enter Your address" [(ngModel)]="item.address" required />
         </div>
         <div class="form-control">
             <label for="detail">หมายเหตุ</label>
-            <input type="text" placeholder="Enter Your Telephone" [(ngModel)]="item.detail" required />
+            <input type="text" placeholder="Enter Your detail" [(ngModel)]="item.detail" required />
         </div>
 
         <div class="form-control">
             <label for="congenitaldisease">โรคประจำตัว</label>
-            <input type="text" placeholder="Enter Your Telephone" [(ngModel)]="item.congenitaldisease" required />
+            <input type="text" placeholder="หากไม่มี ให้ระบุว่าไม่มี" [(ngModel)]="item.congenitaldisease" required />
         </div>
         <div class="form-control">
             <label for="drugallergy">การแพ้ยา</label>
-            <input type="text" placeholder="Enter Your Telephone" [(ngModel)]="item.drugallergy" required />
+            <input type="text" placeholder="หากไม่มี ให้ระบุว่าไม่มี" [(ngModel)]="item.drugallergy" required />
         </div>
         <div>
             <input type="checkbox" class="form-control" [value]="1" [(ngModel)]="item.pregnant" required />
