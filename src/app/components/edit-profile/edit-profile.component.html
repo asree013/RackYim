@@ -28,54 +28,54 @@
 
         <h2>แบบฟอร์มการแก้ไขโปรไฟล์ออนไลน์</h2>
         <div class="form-group">
-            <input type="radio" class="form-control" [value]="'M'"  required />
+            <input type="radio" class="form-control" [(ngModel)]="item.gender" [value]="'M'" required />
             <label for="gender"> ชาย</label><br />
-            <input type="radio" class="form-control" [value]="'F'"  required />
+            <input type="radio" class="form-control" [(ngModel)]="item.gender" [value]="'F'" required />
             <label for="gender"> หญิง</label><br />
         </div>
         <div class="form-control">
             <label for="idCard">หมายเลขบัตรประชาชน</label>
-            <input type="text" name="" id="username" placeholder="Enter Your id card"  required />
+            <input type="text" name="" [(ngModel)]="item.idCard" id="item.idCard" placeholder="Enter Your id card" required />
         </div>
         <div class="form-control">
             <label for="firstName">ชื่อ</label>
-            <input type="text" placeholder="Enter Your Username"  required />
+            <input type="text" placeholder="Enter Your Firstname" [(ngModel)]="item.firstName" required />
         </div>
         <div class="form-control">
             <label for="lastName">นามสกุล</label>
-            <input type="text" placeholder="Enter Your lastName"  required />
+            <input type="text" placeholder="Enter Your lastName" [(ngModel)]="item.lastName" required />
         </div>
         <div class="form-control">
             <label for="phonenumber">โทรศัพท์</label>
-            <input type="text" placeholder="Enter Your Telephone"  required />
+            <input type="text" placeholder="Enter Your Telephone" [(ngModel)]="item.phonenumber" required />
         </div>
         <div class="form-control">
             <label for="email">อีเมล</label>
-            <input type="text" placeholder="Enter Your email"  required />
+            <input type="text" placeholder="Enter Your email" [(ngModel)]="item.email" required />
         </div>
         <div class="form-control">
             <label for="address">ที่อยู่</label>
-            <input type="text" placeholder="Enter Your address"  required />
+            <input type="text" placeholder="Enter Your address" [(ngModel)]="item.address" required />
         </div>
         <div class="form-control">
             <label for="detail">หมายเหตุ</label>
-            <input type="text" placeholder="Enter Your detail"  required />
+            <input type="text" placeholder="Enter Your detail" [(ngModel)]="item.detail" required />
         </div>
 
         <div class="form-control">
             <label for="congenitaldisease">โรคประจำตัว</label>
-            <input type="text" placeholder="หากไม่มี ให้ระบุว่าไม่มี"  required />
+            <input type="text" placeholder="หากไม่มี ให้ระบุว่าไม่มี" [(ngModel)]="item.congenitaldisease" required />
         </div>
         <div class="form-control">
             <label for="drugallergy">การแพ้ยา</label>
-            <input type="text" placeholder="หากไม่มี ให้ระบุว่าไม่มี"  required />
+            <input type="text" placeholder="หากไม่มี ให้ระบุว่าไม่มี" [(ngModel)]="item.drugallergy" required />
         </div>
         <div>
-            <input type="checkbox" class="form-control" [value]="1"  required />
+            <input type="checkbox" class="form-control" [value]="true" [(ngModel)]="item.pregnant" required />
             <label for="pregnant"> ตั้งครรภ์</label><br />
         </div>
         <!-- <button type="submit" (click)="onSubmit()">ตกลง</button> -->
-        <button class="submit" (click)="onSubmit()">ตกลง</button>
+        <button class="submit" (click)="onSubmit()">แก้ไข</button>
 
     </div>
 
@@ -83,5 +83,5 @@
 </ng-container>
 
 <ng-container *ngIf="onload">
-
+    <spinner></spinner>
 </ng-container>

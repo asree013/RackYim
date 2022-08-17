@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Day } from 'src/app/components/calendar-reserve/calendar.model';
-
+import * as moment from 'moment-timezone'
 
 @Injectable({
   providedIn: 'root'
@@ -23,15 +24,17 @@ export class CalendarReserveService {
     let days = [];
 
     let firstday = this.createDay(1, monthIndex, year);
-  
+
     //create empty days
     for (let i = 1; i < firstday.weekDayNumber; i++) {
-      days.push({
-        weekDayNumber: i,
-        monthIndex: monthIndex,
-        year: year,
-      } as Day);
+      let newDay = new Day()
+      newDay.weekDayNumber = i
+      newDay.monthIndex = monthIndex
+      newDay.year = year
+      days.push(newDay);
     }
+    console.log(firstday);
+
     days.push(firstday);
     //
 
@@ -114,5 +117,15 @@ export class CalendarReserveService {
   public newFormatDate(date: Day): string {
     let newdate: string = `${date.year}-${(String(date.monthIndex + 1).length === 1 ? "0" + String(date.monthIndex + 1) : String(date.monthIndex + 1))}-${(String(date.number).length === 1) ? "0" + String(date.number) : String(date.number)}`;
     return newdate
+  }
+  validOnSelectDate(date: Day): Observable<boolean> {
+    return new Observable((obs) => {
+      let toDate = moment().add(1).tz('Asia/Bangkok').valueOf()
+      let dateSelect = moment(this.newFormatDate(date)).tz('Asia/Bangkok').valueOf()
+      console.log('toDate',toDate);
+      console.log('dateSelect',dateSelect);
+      
+      obs.next((toDate < dateSelect )) 
+    })
   }
 }

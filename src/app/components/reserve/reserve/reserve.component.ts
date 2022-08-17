@@ -76,11 +76,15 @@ export class ReserveComponent implements OnInit {
         cancelButtonText: 'ไม่, ฉันยังไม่จอง',
       }).then((result) => {
         if (result.value) {
+          this.onload = !this.onload;
           this.onSubmit().subscribe(()=>{
+            this.onload = !this.onload;
             Swal.fire({
               title: 'การเเจ้งเตือน?',
               text: 'คุณทำการจองสำเร็จ',
               icon: 'success',
+              showConfirmButton:false,
+              timer:3000
             }).then(()=>{
               this.router.navigate(['history-reserve']).then()
             });

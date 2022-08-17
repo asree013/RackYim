@@ -16,4 +16,13 @@ export class GatewayService {
       })
     })
   }
+  put(path: string,data:any): Observable<any> {
+    return new Observable((obs) => {
+      this.http.put(this.url + path,data).subscribe((result) => {
+        obs.next(result)
+      }, (error: HttpErrorResponse) => {
+        obs.error(error)
+      })
+    })
+  }
 }

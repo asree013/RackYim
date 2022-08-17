@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CalendarReserveService } from 'src/app/service/calendar-reserve/calendar-reserve.service';
 import { Day } from 'src/app/components/calendar-reserve/calendar.model';
-import {  Router } from '@angular/router';
-
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 
 
@@ -14,7 +14,7 @@ import {  Router } from '@angular/router';
 
 
 export class CalendarReserveComponent implements OnInit {
-  
+
   public monthDays: Day[];
 
   public monthNumber: number;
@@ -22,10 +22,10 @@ export class CalendarReserveComponent implements OnInit {
 
   public weekDaysName: string[] = [];
 
-  
 
-  constructor(public calendarReserveService: CalendarReserveService,private router:Router) { }
-  
+
+  constructor(public calendarReserveService: CalendarReserveService, private router: Router) { }
+
   ngOnInit(): void {
     this.setMonthDays(this.calendarReserveService.getCurrentMonth());
 
@@ -37,7 +37,7 @@ export class CalendarReserveComponent implements OnInit {
     this.weekDaysName.push("ส");
     this.weekDaysName.push("อา");
   }
-  
+
 
   onNextMonth(): void {
     this.monthNumber++;
@@ -70,13 +70,28 @@ export class CalendarReserveComponent implements OnInit {
   }
 
   selectDay(day: Day) {
-    console.log(this.calendarReserveService.newFormatDate(day));
-    this.router.navigate([`/reserve`],{queryParams:{
-      date:this.calendarReserveService.newFormatDate(day)
-    }})
+    this.calendarReserveService.validOnSelectDate(day).subscribe((result) => {
+      if (result) {
+        this.router.navigate([`/reserve`], {
+          queryParams: {
+            date: this.calendarReserveService.newFormatDate(day)
+          }
+        })
+      }else{
+        Swal.fire({
+          title: 'การแจ้งเตือน',
+          text: "โปรดเลือกวันที่ มากกว่า วันที่ ปัจจุบัน 1วัน ",
+          icon: 'error',
+          showConfirmButton: true
+        });
+      }
+      // console.log(this.calendarReserveService.newFormatDate(day));
+      // 
+    })
+
   }
   addDays(date: Date, days: number): Date {
     date.setDate(date.getDate() + days);
     return date;
-}
+  }
 }

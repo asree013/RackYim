@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { FormBuilder } from '@angular/forms';
 import { patients } from '../register/register-type';
 import { EditProfileService } from 'src/app/service/edit-profile/edit-profile.service';
+import { PatientService } from 'src/app/service/patient/patient.service';
 
 @Component({
   selector: 'app-edit-profile',
@@ -21,7 +22,8 @@ export class EditProfileComponent implements OnInit {
   constructor( public FormBuilder: FormBuilder,
     private editProfileService: EditProfileService,
     private lineservice: LineService,
-    private router: Router
+    private router: Router,
+    private patientService:PatientService
 ) { }
 
   async ngOnInit(){
@@ -29,9 +31,12 @@ export class EditProfileComponent implements OnInit {
   }
   onTnitailData(){
     this.lineservice.lineInit().subscribe((result) => {
-      this.ItemView.profile = result;
-      this.item.companyId = result.companyId
-      this.onload = !this.onload
+      this.patientService.getPatientByLineliffId(result.userId).subscribe((value:any)=>{
+        if (value.data) {
+          this.item = value.data
+          this.onload = !this.onload
+        }
+      })
     });
   }
   onSubmit(): any {
@@ -126,11 +131,11 @@ export class EditProfileComponent implements OnInit {
 
       return 0
     }
-    this.ItemView.patient = this.item;
-    this.editProfileService.EditerProfile(this.ItemView).subscribe((result: registerlineliffitemview) => {
+    
+    this.editProfileService.EditerProfile(this.item).subscribe((result: patients) => {
       Swal.fire({
         title: 'การแจ้งเตือน',
-        text: "ลงทะเบียนสมาชิกเรียบร้อย",
+        text: "แก้ไขข้อมูลเรียบร้อย",
         icon: 'success',
         showConfirmButton: true
       }).then(() => {
@@ -147,8 +152,6 @@ export class EditProfileComponent implements OnInit {
 
   }
 
-  reComplet() {
-    Swal.fire("สมัครสมาชิกเรียบร้อย");
-  }
+
 
 }
