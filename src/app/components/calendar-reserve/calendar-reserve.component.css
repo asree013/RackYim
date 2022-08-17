@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Prompt', sans-serif;
@@ -34,27 +34,33 @@
     margin-top: 20%;
     margin-left: 40%;
 }
+
 .container nav {
     width: 50%;
     margin-top: -10%;
     margin-left: 55%;
 }
-.container nav ul h2{
+
+.container nav ul h2 {
     text-decoration: none;
     color: #000;
     font-size: 20px;
 }
-.container nav ul h3{
+
+.container nav ul h3 {
     text-decoration: none;
     color: #000;
     font-size: 20px;
 }
-.container nav ul h2:hover{
+
+.container nav ul h2:hover {
     color: #ff5ea2;
 }
-.container nav ul h3:hover{
+
+.container nav ul h3:hover {
     color: #ff5ea2;
 }
+
 
 /* .calendar{
     width: 210px;
@@ -124,6 +130,8 @@
     font-size: 20;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
 }
+
+
 /*   
 .days div {
     font-size: 1.5rem;
@@ -135,7 +143,7 @@
     align-items: center;
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
 } */
-  
+
 .days {
     margin-top: 2%;
     margin-left: 6%;
@@ -157,6 +165,7 @@
     transition: background-color 0.2s;
     cursor: pointer;
 }
+
 .days div:hover {
     transform: scale(2);
 }
@@ -165,7 +174,6 @@
     background-color: #262626;
     border: 0.2rem solid #777;
     cursor: pointer;
-
 }
 
 .prev-date,
@@ -177,20 +185,17 @@
     background-color: #e217d1;
 }
 
-
-@media only screen and (max-width:1024px){
+@media only screen and (max-width:1024px) {
     .container {
-    max-width: 100vh;
-    position: relative;
+        max-width: 100vh;
+        position: relative;
     }
-
     .barser img {
         width: 100%;
         margin-left: 12%;
         z-index: -1;
         position: fixed;
     }
-
     .serlica img {
         width: 100%;
         margin-left: -8;
@@ -198,7 +203,6 @@
         z-index: -1;
         position: fixed;
     }
-
     .profile img {
         width: 70%;
         margin-top: 38%;
@@ -206,31 +210,26 @@
         z-index: -1;
         position: absolute;
     }
-
-
     .container img {
         width: 20%;
         margin-top: 10%;
         margin-left: 25%;
     }
-
     .container nav {
         width: 50%;
         margin-top: -11%;
         margin-left: 45%;
     }
-
-    .container nav ul h2{
+    .container nav ul h2 {
         text-decoration: none;
         color: #000;
         font-size: 19px;
     }
-    .container nav ul h3{
+    .container nav ul h3 {
         text-decoration: none;
         color: #000;
         font-size: 25px;
     }
-
     .loit {
         width: 40rem;
         height: 40rem;
@@ -240,7 +239,6 @@
         justify-content: center;
         align-items: center;
     }
-
     .calendar {
         width: 24rem;
         height: 28rem;
@@ -250,7 +248,6 @@
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
         border-radius: 1cm 1cm 0.5cm 0.5cm;
     }
-
     .month {
         width: 83%;
         height: 5rem;
@@ -263,12 +260,10 @@
         text-align: center;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
     }
-
     .month i {
         font-size: 2.5rem;
         cursor: pointer;
     }
-
     .month h1 {
         font-size: 2rem;
         font-weight: 400;
@@ -277,12 +272,10 @@
         letter-spacing: 0.2rem;
         margin-bottom: -1rem;
     }
-
     .month p {
         font-size: 1.3rem;
         margin-top: -6%;
     }
-
     .day {
         margin-top: 2%;
         margin-left: 5.5%;
@@ -291,7 +284,6 @@
         font-size: 20;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
     }
-      
     /* .weekdays div {
         font-size: 1.rem;
         font-weight: 400;
@@ -302,7 +294,6 @@
         align-items: center;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
     } */
-      
     .days {
         margin-top: 2%;
         margin-left: 6%;
@@ -312,7 +303,6 @@
         font-size: 20;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
     }
-
     .days div {
         font-size: 1rem;
         margin: 0.5rem;
@@ -324,72 +314,62 @@
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
         transition: background-color 0.2s;
     }
-
     .days div:hover:not(.today) {
         background-color: #262626;
         border: 0.2rem solid #777;
         cursor: pointer;
     }
-
     .prev-date,
     .next-date {
         opacity: 0.5;
     }
-
     .today {
         background-color: #e217d1;
     }
 }
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:700px) {
     .barser img {
         width: 100%;
         z-index: -1;
         position: fixed;
     }
-
     .serlica img {
         width: 120%;
         margin-top: 116%;
         z-index: -1;
         position: fixed;
     }
-
     .profile img {
         width: 100%;
         margin-top: 100%;
         position: absolute;
         z-index: -2;
     }
-
     .container {
         width: 100%;
         position: relative;
     }
-
     .container img {
         width: 30%;
         margin-top: 10%;
         margin-left: 10%;
     }
-
     .container nav {
         width: 50%;
         margin-top: -20%;
         margin-left: 40%;
     }
-
-    .container nav ul h2{
+    .container nav ul h2 {
         text-decoration: none;
         color: #000;
         font-size: 10px;
     }
-    .container nav ul h3{
+    .container nav ul h3 {
         text-decoration: none;
         color: #000;
         font-size: 18px;
     }
-
     .loit {
         width: 100px;
         height: 100px;
@@ -398,7 +378,6 @@
         justify-content: center;
         align-items: center;
     }
-
     .calendar {
         width: 23rem;
         height: 28rem;
@@ -408,7 +387,6 @@
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
         border-radius: 1cm 1cm 0.5cm 0.5cm;
     }
-
     .month {
         width: 82%;
         height: 5rem;
@@ -421,12 +399,10 @@
         text-align: center;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
     }
-
     .month i {
         font-size: 2.5rem;
         cursor: pointer;
     }
-
     .month h1 {
         font-size: 1.8rem;
         font-weight: 400;
@@ -434,12 +410,10 @@
         letter-spacing: 0.2rem;
         margin-bottom: 1rem;
     }
-
     .month p {
         margin-top: -28%;
         font-size: 1.5rem;
     }
-
     .day {
         margin-top: 2%;
         margin-left: 6%;
@@ -449,7 +423,6 @@
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
         cursor: pointer;
     }
-      
     /* .weekdays div {
         font-size: 1.3rem;
         font-weight: 400;
@@ -460,7 +433,6 @@
         align-items: center;
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
     } */
-      
     .days {
         margin-top: 2%;
         margin-left: 6%;
@@ -471,7 +443,6 @@
         text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
         cursor: pointer;
     }
-
     .days div {
         font-size: 0.9rem;
         margin: 0.rem;
@@ -484,20 +455,326 @@
         transition: background-color 0.2s;
         cursor: pointer;
     }
-
     .days div:hover:not(.today) {
         background-color: #262626;
         border: 0.2rem solid #777;
         cursor: pointer;
     }
-
     .prev-date,
     .next-date {
         opacity: 0.1;
     }
-
     .today {
         background-color: #e217d1;
     }
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+}
+
+.container {
+    max-width: 100vh;
+    position: relative;
+}
+
+.barser img {
+    width: 100%;
+    margin-top: -2%;
+    z-index: -1;
+    position: fixed;
+}
+
+.serlica img {
+    width: 100%;
+    margin-top: 0%;
+    z-index: -1;
+    position: fixed;
+}
+
+.container img {
+    width: 15%;
+    margin-top: 20%;
+    margin-left: 40%;
+}
+
+.container nav {
+    width: 50%;
+    margin-top: -10%;
+    margin-left: 55%;
+}
+
+.container nav ul h2 {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.container nav ul h3 {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.container nav ul h2:hover {
+    color: #ff5ea2;
+}
+
+.container nav ul h3:hover {
+    color: #ff5ea2;
+}
+
+.ul {
+    max-width: 100%;
+    margin-top: 5%;
+    margin-left: 40%;
+}
+
+.boxder {
+    width: 50rem;
+    height: 18rem;
+    margin-top: 5%;
+    margin-left: 20%;
+    background-color: #ffffff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+    border-radius: 1cm 1cm 0 0;
+}
+
+.boxder a {
+    margin-left: 10%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.head-box {
+    width: 92%;
+    height: 5rem;
+    background-color: #ff5ea2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1cm 1cm 0 0;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.boxder .pollo {
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 80%;
+    color: #000;
+}
+
+.boxder .smart {
+    margin-top: -14%;
+    margin-left: 22%;
+    font-size: 80%;
+    color: #000;
+}
+
+.boxder .reques {
+    margin-top: -15%;
+    margin-left: 70%;
+}
+
+.boxder .reques .io {
+    font-size: 2cm;
+    margin-top: -25%;
+    margin-left: 10%;
+}
+
+.submit {
+    cursor: pointer;
+    background-color: #f308ac;
+    color: #fff;
+    border-radius: 0px 15px 0 15px;
+    margin-top: 40px;
+    margin-left: 266px;
+    width: 30%;
+    display: block;
+    font-size: 25px;
+    padding: 10px;
+}
+
+@media only screen and (max-width:1024px) {
+    .barser img {
+        width: 100%;
+        z-index: -1;
+        position: fixed;
+    }
+    .serlica img {
+        width: 100%;
+        margin-top: 52%;
+        z-index: -1;
+        position: fixed;
+    }
+    .container {
+        width: 100%;
+        position: relative;
+    }
+    .container img {
+        width: 20%;
+        margin-top: 10%;
+        margin-left: 25%;
+    }
+    .container nav {
+        width: 50%;
+        margin-top: -11%;
+        margin-left: 45%;
+    }
+    .container nav ul h2 {
+        text-decoration: none;
+        color: #000;
+        font-size: 19px;
+    }
+    .container nav ul h3 {
+        text-decoration: none;
+        color: #000;
+        font-size: 25px;
+    }
+    .ul {
+        max-width: 100%;
+        margin-top: 20%;
+        margin-left: 55%;
+    }
+    .boxder {
+        width: 35rem;
+        height: 38rem;
+        margin-top: 5%;
+        margin-left: 15%;
+        background-color: #ffffff;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+        border-radius: 1cm 1cm 0 0;
+    }
+    .boxder a {
+        margin-left: 10%;
+        text-align: center;
+        color: #ffffff;
+    }
+    .head-box {
+        width: 88.3%;
+        height: 5rem;
+        background-color: #ff5ea2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 1cm 1cm 0 0;
+        padding: 0 2rem;
+        text-align: center;
+        text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
+    .boxder .pollo {
+        margin-top: 10%;
+        margin-left: 17%;
+        font-size: 80%;
+        color: #000;
+    }
+    .boxder .smart {
+        margin-top: -20%;
+        margin-left: 45%;
+        font-size: 80%;
+        color: #000;
+    }
+    .boxder .reques {
+        margin-top: 20%;
+        margin-left: 28%;
+    }
+    .boxder .reques .io {
+        font-size: 2.5cm;
+        margin-top: -25%;
+        margin-left: 10%;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .barser img {
+        width: 100%;
+        z-index: -1;
+        position: fixed;
+    }
+    .serlica img {
+        width: 100%;
+        margin-top: 135%;
+        z-index: -1;
+        position: fixed;
+    }
+    .container {
+        width: 100%;
+        position: relative;
+    }
+    .container img {
+        width: 30%;
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+    .container nav {
+        width: 50%;
+        margin-top: -20%;
+        margin-left: 40%;
+    }
+    .container nav ul h2 {
+        text-decoration: none;
+        color: #000;
+        font-size: 10px;
+    }
+    .container nav ul h3 {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+    }
+    .ul {
+        max-width: 100%;
+        margin-top: 80%;
+        margin-left: 5%;
+    }
+    .boxder {
+        width: 22.2rem;
+        height: 38rem;
+        margin-top: 6%;
+        margin-left: 3%;
+        background-color: #ffffff;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+        border-radius: 1cm 1cm 0 0;
+    }
+    .boxder a {
+        margin-left: 20%;
+        text-align: center;
+        color: #ffffff;
+    }
+    .head-box {
+        width: 82%;
+        height: 5rem;
+        background-color: #ff5ea2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 1cm 1cm 0 0;
+        padding: 0 2rem;
+        text-align: center;
+        text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
+    .boxder .pollo {
+        margin-top: 10%;
+        margin-left: 12%;
+        font-size: 60%;
+        color: #000;
+    }
+    .boxder .smart {
+        margin-top: -25%;
+        margin-left: 45%;
+        font-size: 60%;
+        color: #000;
+    }
+    .boxder .reques {
+        margin-top: 45%;
+        margin-left: 12%;
+    }
+    .boxder .reques .io {
+        font-size: 2.5cm;
+        margin-top: -25%;
+        margin-left: 10%;
+    }
+}

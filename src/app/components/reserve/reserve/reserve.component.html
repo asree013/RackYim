@@ -1,47 +1,50 @@
 <ng-container *ngIf="!onload">
 
-    <div class="barser">
-        <img src="./assets/image/tophistory.png">
-    </div>
-
-    <div class="serlica">
-        <img src="./assets/image/foothis.png">
-    </div>
-
-    <div class="container">
-        <div class="brand">
-            <img src="./assets/image/Logo-RukjimClinic.png">
-            <nav>
-                <ul>
-                    <h2>คลินิกรักยิ้ม | Rakyim Dental CLinic</h2>
-                    <h3>ประวัติผู้ป่วยออนไลน์ | online</h3>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
-    <div class="profile">
-        <img src="./assets/image/profile.png">
-    </div>
-
-    <div class="ul">
-        <h2>แบบฟอร์มการจองออนไลน์</h2>
-        <div class="form-control">
-            <label for="typebookingId">จองคิวเรื่อง</label>
-            <label for=""></label>
-            <select (change)="getTypebooking($event)" id="detail">
-                <option [value]="null">โปรดเลือก</option>
-                <option *ngFor="let item of listtypeReserve" [value]="item.id">{{item.description}}</option>
-            </select>
-        </div>
-        <div class="form-control">
-            <label for="detail">รายละเอียด</label>
-            <input type="text" name="" [(ngModel)]="item.detail" id="detail" placeholder="กรุณากรอก">
+    <ng-container>
+        <div class="barser">
+            <img src="./assets/image/tophistory.png">
         </div>
 
-        <!-- <button type="submit" (click)="onSubmit()">ตกลง</button> -->
-        <button class="submit" (click)="ReserveSweetAlert()">ตกลง</button>
-    </div>
+        <div class="serlica">
+            <img src="./assets/image/foothis.png">
+        </div>
+
+        <div class="container">
+            <div class="brand">
+                <img src="./assets/image/Logo-RukjimClinic.png">
+                <nav>
+                    <ul>
+                        <h2>คลินิกรักยิ้ม | Rakyim Dental CLinic</h2>
+                        <h3>ประวัติผู้ป่วยออนไลน์ | online</h3>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="profile">
+            <img src="./assets/image/profile.png">
+        </div>
+
+        <div class="ul">
+            <h2>แบบฟอร์มการจองออนไลน์</h2>
+            <div class="form-control">
+                <label for="typebookingId">จองคิวเรื่อง</label>
+                <label for=""></label>
+                <select (change)="getTypebooking($event)" id="detail">
+                    <option [value]="null">โปรดเลือก</option>
+                    <option *ngFor="let item of listtypeReserve" [value]="item.id">{{item.description}}</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="detail">รายละเอียด</label>
+                <input type="text" name="" [(ngModel)]="item.detail" id="detail" placeholder="กรุณากรอก">
+            </div>
+
+            <!-- <button type="submit" (click)="onSubmit()">ตกลง</button> -->
+            <button class="submit" (click)="ReserveSweetAlert()">ตกลง</button>
+        </div>
+    </ng-container>
+
 </ng-container>
 <ng-container *ngIf="onload">
     <spinner></spinner>

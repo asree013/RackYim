@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { HistoyReserveService } from 'src/app/service/history_reserve/histoy-reserve.service';
 import {  booking } from './history_reserve_type';
 
@@ -10,7 +11,7 @@ import {  booking } from './history_reserve_type';
 export class HistoryReserveComponent implements OnInit {
   item:booking = new booking();
 
-  constructor(private histoyReserveService: HistoyReserveService) { }
+  constructor(private histoyReserveService: HistoyReserveService,private router:Router) { }
 
   ngOnInit(): void {
     this.histoyReserveService.GetOnereserve(this.item).subscribe(res =>{
@@ -28,5 +29,7 @@ export class HistoryReserveComponent implements OnInit {
       })
     }
   }
-
+  gotomenu(){
+    this.router.navigate(['menu'])
+  }
 }

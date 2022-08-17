@@ -9,6 +9,7 @@ import { Selecter } from 'src/app/Base/models/selecter';
 import { Booking } from 'src/app/Base/models/booking';
 import { PatientService } from 'src/app/service/patient/patient.service';
 import { Observable } from 'rxjs';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-reserve',
@@ -18,6 +19,7 @@ import { Observable } from 'rxjs';
 export class ReserveComponent implements OnInit {
   onload:boolean = true
   item: Booking = new Booking();
+  isbooking:boolean
   constructor(
     public FormBuilder: FormBuilder,
     private router: Router,
@@ -43,6 +45,7 @@ export class ReserveComponent implements OnInit {
           this.item.patient = result.data;
           this.item.patientId = result.data.id;
           this.item.datebooking = this.path.snapshot.queryParams['date']
+          this.item.id = uuidv4()
         }else{
           this.router.navigate(['menu'])
         }
@@ -86,7 +89,7 @@ export class ReserveComponent implements OnInit {
               showConfirmButton:false,
               timer:3000
             }).then(()=>{
-              this.router.navigate(['history-reserve']).then()
+              this.router.navigate(['calendar-reserve']).then()
             });
           },(err)=>{
             Swal.fire({

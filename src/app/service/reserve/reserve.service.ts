@@ -6,6 +6,7 @@ import { reserves } from 'src/app/components/reserve/reserve.type';
 import { GatewayService } from 'src/app/Base/service/gateways/gateway.service';
 import { Selecter } from 'src/app/Base/models/selecter';
 import { Booking } from 'src/app/Base/models/booking';
+import { booking } from 'src/app/components/history-reserve/history_reserve_type';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,11 @@ export class ReserveService {
       )
 
   }
-
+  getrepoByPatientIdAndBookingStatusBookingByLineliff(id:string): Observable<booking> {
+    let API_URL = `${this.Reserve_API}/getrepoByPatientIdAndBookingStatusBookingByLineliff/${id}`;
+    return this.httpClient.get<booking>(API_URL)
+     
+  }
 
   delete(id: any): Observable<any> {
     let API_URL = `${this.Reserve_API}/delete${id}`;
