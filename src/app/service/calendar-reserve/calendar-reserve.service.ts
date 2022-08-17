@@ -23,7 +23,7 @@ export class CalendarReserveService {
     let days = [];
 
     let firstday = this.createDay(1, monthIndex, year);
-
+  
     //create empty days
     for (let i = 1; i < firstday.weekDayNumber; i++) {
       days.push({

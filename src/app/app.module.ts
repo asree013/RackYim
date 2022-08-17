@@ -12,10 +12,7 @@ import { ErrorpageComponent } from './components/errorpage/errorpage.component';
 import { MenuModule } from './components/menu/menu.module';
 import { ReserveModule } from './components/reserve/reserve.module';
 import { ShereModule } from './Base/share/shere.module';
-
-
-
-
+import { EditProfileModule } from './components/edit-profile/edit-profile.module';
 
 
 @NgModule({
@@ -36,7 +33,8 @@ import { ShereModule } from './Base/share/shere.module';
     CalendarModule,
     CalendarReserveModule,
     ReserveModule,
-    ShereModule
+    ShereModule,
+    EditProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent]
