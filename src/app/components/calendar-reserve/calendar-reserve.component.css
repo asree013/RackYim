@@ -70,7 +70,7 @@
 
 .day{
     width: 60px;
-    
+
 } */
 
 .loit {
@@ -132,7 +132,7 @@
 }
 
 
-/*   
+/*
 .days div {
     font-size: 1.5rem;
     font-weight: 400;
@@ -586,18 +586,31 @@
     margin-left: 10%;
 }
 
-.submit {
-    cursor: pointer;
-    background-color: #f308ac;
-    color: #fff;
-    border-radius: 0px 15px 0 15px;
-    margin-top: 40px;
-    margin-left: 266px;
-    width: 30%;
-    display: block;
-    font-size: 25px;
-    padding: 10px;
+.date5 {
+  display: flex;
+  margin-left: 79%;
+  margin-top: -28%;
+  color: #ED0404;
 }
+
+.date h1{
+  font-size: 0.6cm;
+  padding-right: 0.7rem;
+}
+
+.submit {
+  cursor: pointer;
+  background-color: #6700c7;
+  color:#fff;
+  border-radius: 0px 15px 0 15px;
+  margin-top:60px;
+  margin-left: 450px;
+  width: 30%;
+  display: block;
+  font-size: 25px;
+  padding: 10px;
+}
+
 
 @media only screen and (max-width:1024px) {
     .barser img {
@@ -686,6 +699,30 @@
         font-size: 2.5cm;
         margin-top: -25%;
         margin-left: 10%;
+    }
+
+    .date5 {
+      display: flex;
+      margin-left: 40%;
+      margin-top: -10%;
+      color: #ED0404;
+    }
+
+    .date h1{
+        font-size: 0.7cm;
+        padding-right: 0.9rem;
+    }
+    .submit{
+      cursor: pointer;
+      background-color: #9639ec;
+      color:#fff;
+      border-radius: 0px 15px 0 15px;
+      margin-top:60px;
+      margin-left: 270px;
+      width: 30%;
+      display: block;
+      font-size: 25px;
+      padding: 10px;
     }
 }
 
@@ -777,4 +814,29 @@
         margin-top: -25%;
         margin-left: 10%;
     }
+
+    .date5 {
+      display: flex;
+      margin-left: 30%;
+      margin-top: -10%;
+      color: #ED0404;
+    }
+
+    .date h1{
+        font-size: 0.7cm;
+        padding-right: 0.9rem;
+    }
+
+    .submit{
+      cursor: pointer;
+      background-color: #E30397;
+      color:#fff;
+      border-radius: 0px 15px 0 15px;
+      margin-top:40px;
+      margin-left: 100px;
+      width: 50%;
+      display: block;
+      font-size: 20px;
+      padding: 10px;
+  }
 }

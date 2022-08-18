@@ -27,13 +27,13 @@
 .container img {
     width: 25%;
     margin-top: 20%;
-    margin-left: 60%;
+    margin-left: 90%;
 }
 
 .container nav {
     width: 50%;
     margin-top: 2%;
-    margin-left: 55%;
+    margin-left: 78%;
 }
 
 .container nav ul h2{
@@ -45,7 +45,7 @@
     text-decoration: none;
     color: #000;
     font-size: 20px;
-    margin-left: 30%;
+    margin-left: 40%;
 }
 .container nav ul h2:hover{
     color: #ff5ea2;
@@ -56,7 +56,7 @@
 
 .bar{
     display: flex;
-    padding-left: 25%;
+    padding-left: 23%;
     margin-top: 3%;
 }
 
@@ -71,7 +71,7 @@
         max-width: 100vh;
         position: relative;
     }
-    
+
     .barser img {
         width: 100%;
         margin-left: 0%;
@@ -88,15 +88,15 @@
     .container img {
         width: 25%;
         margin-top: 20%;
-        margin-left: 38%;
+        margin-left: 45%;
     }
-    
+
     .container nav {
         width: 50%;
         margin-top: 2%;
         margin-left: 32%;
     }
-    
+
     .container nav ul h2{
         text-decoration: none;
         color: #000;
@@ -106,7 +106,7 @@
         text-decoration: none;
         color: #000;
         font-size: 20px;
-        margin-left: 30%;
+        margin-left: 40%;
     }
     .container nav ul h2:hover{
         color: #ff5ea2;
@@ -117,9 +117,9 @@
 
     .card1 {
         margin-top: 0%;
-        margin-left: -5%;
+        margin-left: -8%;
     }
-    
+
     .card-header {
         margin-left: 35%;
         font-size: medium;
@@ -128,8 +128,8 @@
     .card3 {
         margin-top: 50%;
         margin-left: -68%;
-    } 
-    
+    }
+
 }
 
 @media only screen and (max-width:700px){
@@ -137,7 +137,7 @@
         max-width: 100vh;
         position: relative;
     }
-    
+
     .barser img {
         width: 100%;
         margin-left: 0%;
@@ -157,13 +157,13 @@
         margin-top: 20%;
         margin-left: 38%;
     }
-    
+
     .container nav {
         width: 50%;
         margin-top: 2%;
         margin-left: 28%;
     }
-    
+
     .container nav ul h2{
         text-decoration: none;
         color: #000;
@@ -192,14 +192,14 @@
         margin-top: 0%;
         margin-left: -10%;
     }
-    
+
     .card2 {
         margin-top: 90%;
         margin-left: -83%;
-    } 
-    
+    }
+
     .card3 {
         margin-top: 180%;
         margin-left: -87%;
-    } 
+    }
 }
