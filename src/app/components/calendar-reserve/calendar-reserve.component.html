@@ -37,12 +37,14 @@
                 <h2>ชื่อ-นามสกุล:</h2>
                 <h2>ติดต่ออีเมล:</h2>
                 <h2>เบอร์โทรศัพท์:</h2>
+                <h2>วันที่จองคิว:</h2>
             </div>
             <div class="smart">
                 <h2>{{booking.patient.idCard}}</h2>
                 <h2>{{booking.patient.firstName}}&nbsp;{{booking.patient.lastName}}</h2>
                 <h2>{{booking.patient.email}}</h2>
                 <h2>{{booking.patient.phonenumber}}</h2>
+                <h2>{{booking.bookingdetail.datebooking | date :'yyyy-MM-dd'}}</h2>
             </div>
             <div class="reques">
                 <label for="">คิวที่</label>
@@ -51,8 +53,8 @@
                 </div>
             </div>
             <div class="date5">
-              <h1>วันที่</h1>
-              <h2>15/8/65</h2>
+                <h1>วันที่</h1>
+                <h2>15/8/65</h2>
             </div>
         </div>
 
