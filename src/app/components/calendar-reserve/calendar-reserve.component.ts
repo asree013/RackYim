@@ -19,8 +19,8 @@ import { Booking } from 'src/app/Base/models/booking';
 
 export class CalendarReserveComponent implements OnInit {
   booking: Booking = new Booking();
-  isBooking:boolean
-  onload:boolean = true
+  isBooking: boolean
+  onload: boolean = true
   public monthDays: Day[];
   public monthNumber: number;
   public year: number;
@@ -50,15 +50,15 @@ export class CalendarReserveComponent implements OnInit {
       this.patientService.getPatientByLineliffId(result.userId).subscribe((result: any) => {
         console.log(result);
         if (result.data) {
-          this.bookingService.getrepoByPatientIdAndBookingStatusBookingByLineliff(result.data.id).subscribe((result:any)=>{
+          this.bookingService.getrepoByPatientIdAndBookingStatusBookingByLineliff(result.data.id).subscribe((result: any) => {
             if (result.data === null) {
               this.isBooking = false
-              this.onload =  !this.onload 
-            }else{
+              this.onload = !this.onload
+            } else {
               let item = result;
               this.booking = item
               this.isBooking = true
-              this.onload =  !this.onload 
+              this.onload = !this.onload
             }
             console.log();
           })
@@ -129,15 +129,40 @@ export class CalendarReserveComponent implements OnInit {
     this.router.navigate(['menu'])
   }
 
-  cancelReserve(){
+  cancelReserve() {
     {
       Swal.fire({
         title: 'คุณแน่ใจที่จะยกเลิกจอง?',
         text: 'คุณสามารถเลือกวันที่จะจองได้',
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: 'ใช่, ฉันต้องการจอง',
-        cancelButtonText: 'ไม่, ฉันยังไม่จอง',
+        confirmButtonText: 'ใช่, ฉันต้องการ\nยกเลิกการจองคิว',
+        cancelButtonText: 'ปิด',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.booking.bookingstatus = 3
+          this.bookingService.cancelReserve(this.booking).subscribe((result) => {
+            if (result.status === 'success') {
+              Swal.fire({
+                title: 'การแจ้งเตือน',
+                text: "การยกเลิกการจองสำเร็จ ",
+                icon: 'success',
+                showConfirmButton: false
+              }).then(()=>{
+                this.gotomenu()
+              });
+            }else{
+              Swal.fire({
+                title: 'การแจ้งเตือน',
+                text: "การยกเลิกการจองไม่สำเร็จ \n โปรดลองใหม่อีกครั้ง ",
+                icon: 'error',
+                showConfirmButton: true
+              })
+            }
+          })
+
+        }
+
       })
     }
   }
