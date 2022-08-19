@@ -128,4 +128,17 @@ export class CalendarReserveComponent implements OnInit {
   gotomenu() {
     this.router.navigate(['menu'])
   }
+
+  cancelReserve(){
+    {
+      Swal.fire({
+        title: 'คุณแน่ใจที่จะยกเลิกจอง?',
+        text: 'คุณสามารถเลือกวันที่จะจองได้',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'ใช่, ฉันต้องการจอง',
+        cancelButtonText: 'ไม่, ฉันยังไม่จอง',
+      })
+    }
+  }
 }
