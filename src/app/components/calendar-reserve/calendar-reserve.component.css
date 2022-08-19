@@ -181,6 +181,19 @@
     opacity: 0.5;
 }
 
+.submit5 {
+  cursor: pointer;
+  background-color: #6700c7;
+  color:#fff;
+  border-radius: 0px 15px 0 15px;
+  margin-top:60px;
+  margin-left: 450px;
+  width: 30%;
+  display: block;
+  font-size: 25px;
+  padding: 10px;
+}
+
 .today {
     background-color: #e217d1;
 }
@@ -323,6 +336,20 @@
     .next-date {
         opacity: 0.5;
     }
+
+    .submit5 {
+      cursor: pointer;
+      background-color: #6700c7;
+      color:#fff;
+      border-radius: 0px 15px 0 15px;
+      margin-top:25%;
+      margin-left: 40%;
+      width: 30%;
+      display: block;
+      font-size: 25px;
+      padding: 10px;
+    }
+
     .today {
         background-color: #e217d1;
     }
@@ -463,6 +490,18 @@
     .prev-date,
     .next-date {
         opacity: 0.1;
+    }
+    .submit5 {
+      cursor: pointer;
+      background-color: #6700c7;
+      color:#fff;
+      border-radius: 0px 15px 0 15px;
+      margin-top: 180%;
+      margin-left: 30%;
+      width: 40%;
+      display: block;
+      font-size: 15px;
+      padding: 10px;
     }
     .today {
         background-color: #e217d1;
