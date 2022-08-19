@@ -71,14 +71,14 @@ export class ReserveComponent implements OnInit {
   ReserveSweetAlert() {
     {
       Swal.fire({
-        title: 'คุณแน่ใจที่จะจอง?',
-        text: 'คุณสามารถเลือกวันที่จะจองได้',
+        title: 'ยืนยันการจองอีกครั้ง?',
+        text: `คุณ ${this.item.patient.firstName +""+ this.item.patient.lastName} \n ต้องการจองคิว นัดหมด คลีนิครักยิ้ม ณ วันที่ ${this.item.datebooking} \n `,
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'ใช่, ฉันต้องการจอง',
         cancelButtonText: 'ไม่, ฉันยังไม่จอง',
       }).then((result) => {
-        if (result.value) {
+        if (result.isConfirmed) {
           this.onload = !this.onload;
           this.onSubmit().subscribe(()=>{
             let name = this.item.patient.firstName +""+ this.item.patient.lastName

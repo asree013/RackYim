@@ -59,4 +59,8 @@ export class ReserveService {
     console.log(errorMessage);
     return throwError(errorMessage);
   }
+  cancelReserve(item:Booking):Observable<any>{
+   return this.gateway.put(`/booking/${item.id}`,item)
+
+  }
 }
