@@ -81,6 +81,8 @@ export class ReserveComponent implements OnInit {
         if (result.value) {
           this.onload = !this.onload;
           this.onSubmit().subscribe(()=>{
+            let name = this.item.patient.firstName +""+ this.item.patient.lastName
+            this.lineservice.sentmesagebooking(name,this.item.datebooking)
             this.onload = !this.onload;
             Swal.fire({
               title: 'การเเจ้งเตือน?',

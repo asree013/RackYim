@@ -10,13 +10,16 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'register' },
-  { path: 'register', component: RegisterComponent },
+  {
+    path: 'register',
+    loadChildren: () => import('./components/register/register.module').then((m) => m.RegisterModule)
+  },
   { path: 'menu', component: MenuComponent },
   { path: 'calendar-reserve', component: CalendarReserveComponent },
   { path: 'reserve', component: ReserveComponent },
   { path: 'history-reserve', component: HistoryReserveComponent },
   { path: 'calendar-reserve', component: CalendarReserveComponent },
-  { path: 'edit-profile', component : EditProfileComponent},
+  { path: 'edit-profile', component: EditProfileComponent },
   { path: '**', redirectTo: 'page404' },
   { path: 'page404', component: ErrorpageComponent }
 ];

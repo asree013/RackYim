@@ -45,4 +45,17 @@ export class LineService {
       })
     })
   }
+  async sentmesagebooking(name: string, date: string) {
+
+    await liff.sendMessages([
+      {
+        type: "text",
+        text: `${name} \nได้ทำการจองคิว ณ วันที่ ${date}`,
+      },
+    ]).then(() => {
+      console.log("message sent");
+    }).catch((err: any) => {
+      console.log("error", err);
+    });
+  }
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { ShereModule } from 'src/app/Base/share/shere.module';
+import { RegisteRoutingModule } from './register-routing.module';
 
 
 @NgModule({
@@ -10,10 +11,10 @@ import { ShereModule } from 'src/app/Base/share/shere.module';
     RegisterComponent
   ],
   imports: [
- 
-  CommonModule,
+    CommonModule,
     FormsModule,
-    ShereModule
+    ShereModule,
+    RegisteRoutingModule
   ],
   exports: [
     RegisterComponent
