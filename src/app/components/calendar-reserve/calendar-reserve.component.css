@@ -569,15 +569,15 @@
 }
 
 .boxder .smart {
-    margin-top: -14%;
+    margin-top: -18%;
     margin-left: 22%;
     font-size: 80%;
     color: #000;
 }
 
 .boxder .reques {
-    margin-top: -15%;
-    margin-left: 70%;
+    margin-top: -17%;
+    margin-left: 55%;
 }
 
 .boxder .reques .io {
@@ -586,17 +586,6 @@
     margin-left: 10%;
 }
 
-.date5 {
-  display: flex;
-  margin-left: 79%;
-  margin-top: -28%;
-  color: #ED0404;
-}
-
-.date h1{
-  font-size: 0.6cm;
-  padding-right: 0.7rem;
-}
 
 .submit {
   cursor: pointer;
@@ -686,14 +675,14 @@
         color: #000;
     }
     .boxder .smart {
-        margin-top: -20%;
+        margin-top: -26%;
         margin-left: 45%;
         font-size: 80%;
         color: #000;
     }
     .boxder .reques {
-        margin-top: 20%;
-        margin-left: 28%;
+        margin-top: 18%;
+        margin-left: 15%;
     }
     .boxder .reques .io {
         font-size: 2.5cm;
@@ -701,17 +690,6 @@
         margin-left: 10%;
     }
 
-    .date5 {
-      display: flex;
-      margin-left: 40%;
-      margin-top: -10%;
-      color: #ED0404;
-    }
-
-    .date h1{
-        font-size: 0.7cm;
-        padding-right: 0.9rem;
-    }
     .submit{
       cursor: pointer;
       background-color: #9639ec;
@@ -800,32 +778,21 @@
         color: #000;
     }
     .boxder .smart {
-        margin-top: -25%;
+        margin-top: -31%;
         margin-left: 45%;
         font-size: 60%;
         color: #000;
     }
     .boxder .reques {
         margin-top: 45%;
-        margin-left: 12%;
+        margin-left: 7%;
     }
     .boxder .reques .io {
-        font-size: 2.5cm;
+        font-size: 1.7cm;
         margin-top: -25%;
         margin-left: 10%;
     }
 
-    .date5 {
-      display: flex;
-      margin-left: 30%;
-      margin-top: -10%;
-      color: #ED0404;
-    }
-
-    .date h1{
-        font-size: 0.7cm;
-        padding-right: 0.9rem;
-    }
 
     .submit{
       cursor: pointer;
