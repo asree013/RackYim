@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href='https://fonts.googleapis.com/css?family=Lato'>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
 <ng-container *ngIf="!onload">
     <ng-container *ngIf="isBooking">
         <div class="barser">
@@ -32,12 +37,14 @@
                 <h2>ชื่อ-นามสกุล:</h2>
                 <h2>ติดต่ออีเมล:</h2>
                 <h2>เบอร์โทรศัพท์:</h2>
+                <h2>วันที่จองคิว:</h2>
             </div>
             <div class="smart">
                 <h2>{{booking.patient.idCard}}</h2>
                 <h2>{{booking.patient.firstName}}&nbsp;{{booking.patient.lastName}}</h2>
                 <h2>{{booking.patient.email}}</h2>
                 <h2>{{booking.patient.phonenumber}}</h2>
+                <h2>{{booking.bookingdetail.datebooking | date :'yyyy-MM-dd'}}</h2>
             </div>
             <div class="reques">
                 <label for="">คิวที่</label>

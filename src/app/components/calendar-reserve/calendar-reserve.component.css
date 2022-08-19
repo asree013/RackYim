@@ -70,7 +70,7 @@
 
 .day{
     width: 60px;
-    
+
 } */
 
 .loit {
@@ -132,7 +132,7 @@
 }
 
 
-/*   
+/*
 .days div {
     font-size: 1.5rem;
     font-weight: 400;
@@ -569,15 +569,15 @@
 }
 
 .boxder .smart {
-    margin-top: -14%;
+    margin-top: -18%;
     margin-left: 22%;
     font-size: 80%;
     color: #000;
 }
 
 .boxder .reques {
-    margin-top: -15%;
-    margin-left: 70%;
+    margin-top: -17%;
+    margin-left: 55%;
 }
 
 .boxder .reques .io {
@@ -586,18 +586,20 @@
     margin-left: 10%;
 }
 
+
 .submit {
-    cursor: pointer;
-    background-color: #f308ac;
-    color: #fff;
-    border-radius: 0px 15px 0 15px;
-    margin-top: 40px;
-    margin-left: 266px;
-    width: 30%;
-    display: block;
-    font-size: 25px;
-    padding: 10px;
+  cursor: pointer;
+  background-color: #6700c7;
+  color:#fff;
+  border-radius: 0px 15px 0 15px;
+  margin-top:60px;
+  margin-left: 450px;
+  width: 30%;
+  display: block;
+  font-size: 25px;
+  padding: 10px;
 }
+
 
 @media only screen and (max-width:1024px) {
     .barser img {
@@ -673,19 +675,32 @@
         color: #000;
     }
     .boxder .smart {
-        margin-top: -20%;
+        margin-top: -26%;
         margin-left: 45%;
         font-size: 80%;
         color: #000;
     }
     .boxder .reques {
-        margin-top: 20%;
-        margin-left: 28%;
+        margin-top: 18%;
+        margin-left: 15%;
     }
     .boxder .reques .io {
         font-size: 2.5cm;
         margin-top: -25%;
         margin-left: 10%;
+    }
+
+    .submit{
+      cursor: pointer;
+      background-color: #9639ec;
+      color:#fff;
+      border-radius: 0px 15px 0 15px;
+      margin-top:60px;
+      margin-left: 270px;
+      width: 30%;
+      display: block;
+      font-size: 25px;
+      padding: 10px;
     }
 }
 
@@ -763,18 +778,32 @@
         color: #000;
     }
     .boxder .smart {
-        margin-top: -25%;
+        margin-top: -31%;
         margin-left: 45%;
         font-size: 60%;
         color: #000;
     }
     .boxder .reques {
         margin-top: 45%;
-        margin-left: 12%;
+        margin-left: 7%;
     }
     .boxder .reques .io {
-        font-size: 2.5cm;
+        font-size: 1.7cm;
         margin-top: -25%;
         margin-left: 10%;
     }
+
+
+    .submit{
+      cursor: pointer;
+      background-color: #E30397;
+      color:#fff;
+      border-radius: 0px 15px 0 15px;
+      margin-top:40px;
+      margin-left: 100px;
+      width: 50%;
+      display: block;
+      font-size: 20px;
+      padding: 10px;
+  }
 }
