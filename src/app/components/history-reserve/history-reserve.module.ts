@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HistoryReserveComponent } from './history-reserve.component';
+import { ShereModule } from 'src/app/Base/share/shere.module';
 
 
 
@@ -10,7 +11,8 @@ import { HistoryReserveComponent } from './history-reserve.component';
     HistoryReserveComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ShereModule
   ],
   exports: [
     HistoryReserveComponent

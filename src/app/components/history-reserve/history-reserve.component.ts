@@ -15,6 +15,7 @@ import { booking } from './history_reserve_type';
 export class HistoryReserveComponent implements OnInit {
   item: booking = new booking();
   listHistoyReserve: Booking[] = []
+  onload: boolean = true
   constructor(private histoyReserveService: HistoyReserveService, private router: Router, private lineservice: LineService, private patientService: PatientService) { }
 
   ngOnInit(): void {
@@ -27,7 +28,7 @@ export class HistoryReserveComponent implements OnInit {
             this.listHistoyReserve = this.listHistoyReserve.map((element) => {
               return { ...element, datebooking: element.bookingdetail.datebooking.split('T')[0] }
             })
-          
+            this.onload = !this.onload
           })
         } else {
           this.router.navigate(['menu'])
